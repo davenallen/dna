@@ -1,0 +1,41 @@
+{
+    "col1": {
+        "title": "Professional Experience",
+        "items": [
+            {
+                "title": "CRO & UI/UX Specialist",
+                "subtitle": "Simpler Trading (simplertrading.com)",
+                "date": "2021 – 2026",
+                "text": "Owned the frontend for membership and webinar registration: the page, the redirect and UTM handoff, and the GTM dataLayer events. Kept the JavaScript and Sass coherent across tests and weekly releases. The conversion readout stayed with the company and is not mine to publish."
+            },
+            {
+                "title": "Lead UI/UX Designer",
+                "subtitle": "Leading Response",
+                "date": "2017 – 2021",
+                "text": "Led end-to-end design and development for marketing products. Built the analytics and testing frameworks the campaigns ran on."
+            },
+            {
+                "title": "Interactive Manager",
+                "subtitle": "Adperio",
+                "date": "2013 – 2017",
+                "text": "Directed B2B and B2C communication across digital and print—bridging creative direction with interactive execution for brand and performance campaigns."
+            }
+        ]
+    },
+    "col2": {
+        "title": "Education",
+        "items": [
+            {
+                "title": "Art Institute International",
+                "subtitle": "BA, Visual Communication",
+                "date": "Graduated",
+                "text": "Bachelor's degree focused on visual communication, design principles, and creative problem-solving. Built a foundation in graphic design, typography, and digital media that still underpins my UI/UX and front-end work.",
+                "button": {
+                    "link": "/files/certificate.jpg",
+                    "type": "image",
+                    "label": "B.A. Visual Communication"
+                }
+            }
+        ]
+    }
+}

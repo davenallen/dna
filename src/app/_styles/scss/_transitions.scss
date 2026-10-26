@@ -1,0 +1,70 @@
+/* ------------------------------
+
+transitions
+
+------------------------------ */
+.dna-a {
+  transition: $tr-lg;
+}
+/* ----- in animation ----- */
+.transition-fade {
+  transition: $tr-lg;
+  opacity: 1;
+
+  & .dna-a {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  & .dna-price {
+    &.dna-popular-price {
+      transform: scale(1.03);
+    }
+  }
+}
+/* ----- out animation ----- */
+html.is-animating .transition-fade {
+  opacity: 0;
+
+  & .dna-a {
+    transform: scale(.93);
+    opacity: 0;
+  }
+}
+
+html.is-animating {
+  & .dna-a,
+  & .dna-current-page {
+    opacity: 0;
+  }
+}
+/* ----- in animation ----- */
+.fade-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* ----- out animation ----- */
+html.is-animating .fade-right {
+  transform: translateX(-60px);
+  opacity: 0;
+}
+/* ----- in animation ----- */
+.fade-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* ----- out animation ----- */
+html.is-animating .fade-left {
+  transform: translateX(60px);
+  opacity: 0;
+}
+
+@media (max-width: 920px) {
+  .transition-fade {
+    & .dna-price {
+      &.dna-popular-price {
+        transform: scale(1);
+      }
+    }
+  }
+}

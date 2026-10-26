@@ -1,0 +1,37 @@
+{
+    "title": "What I bring to the seat",
+    "items": [
+        {
+            "title": "React and Next.js",
+            "text": "Production interfaces. Components, pages, and the release that follows a spec.",
+            "button": {
+                "link": "/projects/03-purchase-module-project/#react",
+                "label": "See the component"
+            }
+        },
+        {
+            "title": "JavaScript, CSS, and SCSS",
+            "text": "JavaScript, CSS, and SCSS, including a Sass codebase that stays coherent as it grows.",
+            "button": {
+                "link": "/system",
+                "label": "See the system"
+            }
+        },
+        {
+            "title": "Design to production",
+            "text": "A design spec comes in. The Sass, the components, and the page that ships still match it.",
+            "button": {
+                "link": "/system#foundations",
+                "label": "See foundations"
+            }
+        },
+        {
+            "title": "CRO",
+            "text": "Membership and webinar flows, with the UTM still attached after a redirect and a dataLayer event for the view, the start, and the signup. The rate those events can produce stayed with the company.",
+            "button": {
+                "link": "/projects/09-registration-path/",
+                "label": "See the path"
+            }
+        }
+    ]
+}

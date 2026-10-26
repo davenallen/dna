@@ -1,0 +1,12 @@
+{
+    "title": "Interfaces in production",
+    "ids": [        
+        "13-signup-landing",
+        "10-campaign-launch-kit",
+        "09-registration-path"
+    ],
+    "viewAll": {
+        "link": "/projects",
+        "label": "View the interfaces"
+    }
+}

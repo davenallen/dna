@@ -1,0 +1,18 @@
+{
+    "title": "Why this seat",
+    "intro": "Production interfaces in React and Next.js, the events those pages fire, and a Sass codebase that stays coherent with the design spec.",
+    "items": [
+        {
+            "title": "React and Next.js",
+            "text": "I build the interfaces that ship. JavaScript, CSS, and SCSS sit under that work."
+        },
+        {
+            "title": "Design to Sass",
+            "text": "Matching a design spec and keeping a Sass codebase coherent is normal work, not a special project."
+        },
+        {
+            "title": "Own the frontend",
+            "text": "Membership and webinar flows, redirect and UTM logic, and GTM dataLayer events. I owned the page, the test, and the events. The conversion readout stayed with the company."
+        }
+    ]
+}

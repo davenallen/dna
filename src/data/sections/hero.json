@@ -1,0 +1,21 @@
+{
+    "bg_image": "",
+    "status": "Open to a senior product seat · Lakewood, CO",
+    "roleLine": "Interface / Front-end / Product owner",
+    "title": "UI, UX, systems and tracking — owned by one person.",
+    "description": "I ship the interface and the events it fires. JavaScript, CSS, and SCSS, from a design spec into a coherent codebase. Membership and webinar flows, UTM handoff, and GTM dataLayer events. The conversion readout stayed with the company. I can own a frontend without a large team. I'm looking for a senior product role.",
+    "button": {
+        "link": "/contact",
+        "label": "Let's talk"
+    },
+    "buttonSecondary": {
+        "link": "/files/dna-resume-2026.pdf",
+        "label": "Resume",
+        "external": true
+    },
+    "photo": {
+        "url": "/img/me.jpg",
+        "hoverUrl": "/img/me-ai.jpg",
+        "alt": "David N Allen — senior front-end engineer, Lakewood, CO"
+    }
+}

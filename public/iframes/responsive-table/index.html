@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+:root {
+  --package1: #0f172a;
+  --package2: #6366f1;
+  --package3: #0d9488;
+  --best: #10b981;
+  --check: #10b981;
+  --cross: #94a3b8;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --radius: 20px;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 10px 15px -3px rgb(0 0 0 / 0.08);
+  --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 32px 20px 60px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ========== Segmented Toggle ========== */
+.view-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.view-toggle {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+}
+
+.toggle-option {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.toggle-option:hover {
+  color: var(--text);
+}
+
+.toggle-option.active {
+  background: var(--package1);
+  color: white;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+}
+
+.toggle-option:focus-visible {
+  outline: 2px solid var(--package2);
+  outline-offset: 2px;
+}
+
+/* ========== Buy Buttons ========== */
+.buy-now-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.25);
+}
+
+.buy-now-btn:focus-visible {
+  outline: 2px solid var(--package2);
+  outline-offset: 3px;
+}
+
+.buy-now-btn.package1 { background: var(--package1); }
+.buy-now-btn.package2 { background: var(--package2); }
+.buy-now-btn.package3 { background: var(--package3); }
+
+/* ========== Desktop Table ========== */
+.pricing-table {
+  display: none;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 18px 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pricing-table thead th {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 24px 16px 20px;
+  position: relative;
+}
+
+.pricing-table th:first-child {
+  background: #f1f5f9;
+  color: var(--muted);
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-left: 28px;
+}
+
+.pricing-table th:nth-child(2) { background: var(--package1); }
+.pricing-table th:nth-child(3) { background: var(--package2); }
+.pricing-table th:nth-child(4) { background: var(--package3); }
+
+.pricing-table .price {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 6px 0 2px;
+}
+
+.pricing-table .value {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.pricing-table .best-pill {
+  display: inline-block;
+  background: white;
+  color: var(--package3);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.pricing-table td.feature {
+  text-align: left;
+  padding-left: 28px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #f8fafc;
+}
+
+.pricing-table tbody tr:nth-child(even) td {
+  background: var(--surface);
+}
+
+.pricing-table tbody tr:nth-child(odd) td {
+  background: #f8fafc;
+}
+
+.pricing-table tbody tr:nth-child(odd) td.feature {
+  background: #f1f5f9;
+}
+
+.pricing-table tbody tr:hover td {
+  background: #f1f5f9;
+}
+
+.pricing-table tbody tr:hover td.feature {
+  background: #e2e8f0;
+}
+
+.pricing-table .icon-cell i {
+  font-size: 1.35rem;
+}
+
+.bonus-pill {
+  display: inline-block;
+  background: var(--best);
+  color: white;
+  padding: 2px 9px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ========== Mobile Cards ========== */
+.pricing-cards {
+  display: grid;
+  gap: 28px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.pricing-card-header {
+  padding: 28px 24px 24px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.package1-header { background: var(--package1); }
+.package2-header { background: var(--package2); }
+.package3-header { background: var(--package3); }
+
+.best-value {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--best);
+  color: white;
+  padding: 7px 20px;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.plan-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 12px 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.plan-price {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 4px 0;
+}
+
+.plan-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 8px 24px 8px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.feature-list i {
+  font-size: 1.15rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.card-cta {
+  padding: 8px 24px 28px;
+}
+
+/* ========== Responsive ========== */
+@media (min-width: 900px) {
+  body {
+    padding: 48px 32px 80px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="view-toggle-wrap">
+      <div class="view-toggle" role="group" aria-label="View mode">
+        <button type="button" class="toggle-option" data-view="mobile" aria-pressed="false">
+          <i class="fas fa-mobile-screen"></i> Cards
+        </button>
+        <button type="button" class="toggle-option" data-view="desktop" aria-pressed="false">
+          <i class="fas fa-table"></i> Table
+        </button>
+      </div>
+    </div>
+
+    <div class="pricing-cards"></div>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>What's Included</th>
+          <th>
+            Package 1
+            <span class="price">$797</span>
+            <span class="value">Value: $2,288</span>
+          </th>
+          <th>
+            Package 2
+            <span class="price">$997</span>
+            <span class="value">Value: $2,688</span>
+          </th>
+          <th>
+            <span class="best-pill">Best Value</span>
+            Package 3
+            <span class="price">$1,197</span>
+            <span class="value">Value: $3,088</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </div>
+
+<script>
+const plans = {
+  package1: {
+    name: "Package 1",
+    price: "$797",
+    value: "Value: $2,288",
+    className: "package1",
+    isBestValue: false,
+    features: {
+      theClass: true,
+      theIndicator: true,
+      bonus1: true,
+      bonus2: true,
+      twoDays: false,
+      fourDays: false
+    }
+  },
+  package2: {
+    name: "Package 2",
+    price: "$997",
+    value: "Value: $2,688",
+    className: "package2",
+    isBestValue: false,
+    features: {
+      theClass: true,
+      theIndicator: true,
+      bonus1: true,
+      bonus2: true,
+      twoDays: true,
+      fourDays: false
+    }
+  },
+  package3: {
+    name: "Package 3",
+    price: "$1,197",
+    value: "Value: $3,088",
+    className: "package3",
+    isBestValue: true,
+    features: {
+      theClass: true,
+      theIndicator: true,
+      bonus1: true,
+      bonus2: true,
+      twoDays: true,
+      fourDays: true
+    }
+  }
+};
+
+const featureList = [
+  { key: "theClass", text: "Feature 1" },
+  { key: "theIndicator", text: "Feature 2" },
+  { key: "bonus1", text: "Feature 3", bonus: true },
+  { key: "bonus2", text: "Feature 4", bonus: true },
+  { key: "twoDays", text: "Feature 5" },
+  { key: "fourDays", text: "Feature 6" }
+];
+
+let forcedView = null; // null = auto
+
+function makeFeatureHTML(f) {
+  return f.bonus
+    ? `<span class="bonus-pill">★ BONUS</span> ${f.text}`
+    : f.text;
+}
+
+function renderMobile() {
+  const container = document.querySelector('.pricing-cards');
+  container.innerHTML = Object.values(plans).map(plan => `
+    <div class="pricing-card">
+      <div class="pricing-card-header ${plan.className}-header">
+        ${plan.isBestValue ? '<div class="best-value">Best Value</div>' : ''}
+        <div class="plan-name">${plan.name}</div>
+        <div class="plan-price">${plan.price}</div>
+        <div class="plan-value">${plan.value}</div>
+      </div>
+      <ul class="feature-list">
+        ${featureList.map(f => {
+          const has = plan.features[f.key];
+          return `
+            <li>
+              <i class="fas fa-${has ? 'check' : 'times'}"
+                 style="color: ${has ? 'var(--check)' : 'var(--cross)'}"></i>
+              <span>${makeFeatureHTML(f)}</span>
+            </li>`;
+        }).join('')}
+      </ul>
+      <div class="card-cta">
+        <a href="#" class="buy-now-btn ${plan.className}">Buy Now</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderDesktop() {
+  const tbody = document.querySelector('.pricing-table tbody');
+  const plansArr = Object.values(plans);
+
+  let html = featureList.map(f => `
+    <tr>
+      <td class="feature">${makeFeatureHTML(f)}</td>
+      ${plansArr.map(p => {
+        const has = p.features[f.key];
+        return `<td class="icon-cell">
+          <i class="fas fa-${has ? 'check' : 'times'}"
+             style="color: ${has ? 'var(--check)' : 'var(--cross)'}"></i>
+        </td>`;
+      }).join('')}
+    </tr>
+  `).join('');
+
+  html += `<tr>
+    <td></td>
+    ${plansArr.map(p => `
+      <td style="padding: 24px 16px 28px">
+        <a href="#" class="buy-now-btn ${p.className}">Buy Now</a>
+      </td>
+    `).join('')}
+  </tr>`;
+
+  tbody.innerHTML = html;
+}
+
+function setToggleState(showMobile) {
+  const options = document.querySelectorAll('.toggle-option');
+  options.forEach(btn => {
+    const isActive = (btn.dataset.view === 'mobile' && showMobile) ||
+                     (btn.dataset.view === 'desktop' && !showMobile);
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+}
+
+function updateView() {
+  const cards = document.querySelector('.pricing-cards');
+  const table = document.querySelector('.pricing-table');
+
+  const showMobile = forcedView === 'mobile' ||
+                    (forcedView === null && window.innerWidth < 900);
+
+  if (showMobile) {
+    renderMobile();
+    cards.style.display = 'grid';
+    table.style.display = 'none';
+  } else {
+    renderDesktop();
+    cards.style.display = 'none';
+    table.style.display = 'table';
+  }
+
+  setToggleState(showMobile);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateView();
+
+  document.querySelectorAll('.toggle-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      forcedView = btn.dataset.view;
+      updateView();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (forcedView === null) {
+      setTimeout(updateView, 120);
+    }
+  });
+});
+</script>
+<script src="/iframes/embed-resize.js"></script>
+</body>
+</html>

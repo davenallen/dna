@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Pricing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        :root { 
+            --primary: #3b82f6; 
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: #f8fafc;
+            margin: 0;
+            padding: 28px 16px 36px;
+        }
+        
+        .pricing-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 20px 0;
+        }
+        
+        /* ============= TABS ============= */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            background: white;
+            padding: 8px;
+            border-radius: 9999px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .tab-button {
+            padding: 12px 32px;
+            border-radius: 9999px;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #64748b;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        
+        .tab-button.active {
+            background: #1e2937;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        /* ============= PRICING CARDS ============= */
+        .cards-container {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            border: 2px solid transparent;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.popular {
+            border-color: #3b82f6;
+            transform: scale(1.03);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3b82f6;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 4px 20px;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgb(59 130 246 / 0.3);
+        }
+        
+        .price-card-header h2 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            margin: 0 0 8px 0; 
+            color: #0f172a; 
+        }
+        
+        .price-card-header p { 
+            color: #64748b; 
+            margin: 0 0 24px 0; 
+        }
+        
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 28px;
+        }
+        
+        .price .currency { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            color: #0f172a; 
+        }
+        
+        .price .amount { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            line-height: 1; 
+            color: #0f172a; 
+        }
+        
+        .price .period { 
+            font-size: 1.1rem; 
+            color: #64748b; 
+            font-weight: 500; 
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px 0;
+        }
+        
+        .features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-top: 1px solid #f1f5f9;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+        
+        .features li:first-child { 
+            border-top: none; 
+            padding-top: 0; 
+        }
+        
+        .check { 
+            color: #10b981; 
+            font-weight: bold; 
+            width: 20px; 
+        }
+        
+        .select-btn {
+            width: 100%;
+            background: #0f172a;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 9999px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .select-btn:hover {
+            background: #1e2937;
+            transform: translateY(-2px);
+        }
+        
+        .popular .select-btn { 
+            background: #3b82f6; 
+        }
+        
+        .popular .select-btn:hover { 
+            background: #2563eb; 
+        }
+
+        /* ============= RESPONSIVE ============= */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .pricing-container {
+                padding: 10px 0;
+            }
+            
+            .tabs {
+                padding: 6px;
+                gap: 8px;
+                width: 100%;
+                max-width: 90%;
+                justify-content: flex-start;
+            }
+            
+            .tab-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .pricing-card {
+                max-width: 100%;
+                padding: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tab-button {
+                padding: 10px 16px;
+                font-size: 0.95rem;
+            }
+            
+            .price .amount {
+                font-size: 2.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <div class="tabs" id="tabs">
+            <button class="tab-button active" data-tab="monthly">Monthly</button>
+            <button class="tab-button" data-tab="quarterly">Quarterly</button>
+            <button class="tab-button" data-tab="annual">Annual</button>
+        </div>
+        
+        <div class="cards-container" id="cards-container"></div>
+    </div>
+
+<script>
+    const pricingData = {
+        monthly: {
+            cards: [
+                { title: "Single Product", subtitle: "Single product access", price: 47, period: "/month", popular: false, features: ["Benefit 1", "Benefit 2", "Benefit 3"] },
+                { title: "Single Product + Membership", subtitle: "Single product access + membership benefits", price: 147, period: "/month", popular: true, features: ["Benefit 1", "Benefit 2", "Benefit 3"] }
+            ]
+        },
+        quarterly: {
+            cards: [
+                { title: "Single Product", subtitle: "Single product access", price: 127, period: "/quarter", popular: false, features: ["Benefit 1", "Benefit 2", "Benefit 3"] },
+                { title: "Single Product + Membership", subtitle: "Single product access + membership benefits", price: 397, period: "/quarter", popular: true, features: ["Benefit 1", "Benefit 2", "Benefit 3"] }
+            ]
+        },
+        annual: {
+            cards: [
+                { title: "Single Product", subtitle: "Single product access", price: 470, period: "/year", popular: false, features: ["Benefit 1", "Benefit 2", "Benefit 3"] },
+                { title: "Single Product + Membership", subtitle: "Single product access + membership benefits", price: 1470, period: "/year", popular: true, features: ["Benefit 1", "Benefit 2", "Benefit 3"] }
+            ]
+        }
+    };
+
+    function renderCards(tabKey) {
+        const container = document.getElementById('cards-container');
+        container.innerHTML = '';
+        
+        const data = pricingData[tabKey];
+        
+        data.cards.forEach(card => {
+            const cardHTML = `
+                <div class="pricing-card ${card.popular ? 'popular' : ''}">
+                    ${card.popular ? `<div class="popular-badge">Most popular</div>` : ''}
+                    <div class="price-card-header">
+                        <h2>${card.title}</h2>
+                        <p>${card.subtitle}</p>
+                    </div>
+                    
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">${card.price}</span>
+                        <span class="period">${card.period}</span>
+                    </div>
+                    
+                    <ul class="features">
+                        ${card.features.map(feature => `
+                            <li><span class="check">✔</span> ${feature}</li>
+                        `).join('')}
+                    </ul>
+                    
+                    <button class="select-btn" data-title="${card.title}" data-price="${card.price}" data-period="${card.period}">
+                        Join Now
+                    </button>
+                </div>
+            `;
+            container.innerHTML += cardHTML;
+        });
+
+        // Attach alert-only click handler
+        document.querySelectorAll('.select-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const title = this.getAttribute('data-title');
+                const price = this.getAttribute('data-price');
+                const period = this.getAttribute('data-period');
+
+                alert(`You selected: ${title}\n\nPrice: $${price}${period}`);
+            });
+        });
+    }
+
+    function initializeTabs() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const tabKey = button.getAttribute('data-tab');
+                renderCards(tabKey);
+            });
+        });
+        
+        renderCards('monthly'); // Initial render
+    }
+
+    window.onload = initializeTabs;
+</script>
+<script src="/iframes/embed-resize.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Social Security disability benefits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="brand" href="#register">
+        <span class="brand-seal" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong data-field="brand"></strong>
+          <em data-field="brandNote"></em>
+        </span>
+      </a>
+      <p class="bar-when"><span data-field="whenLabel"></span> · <span data-field="timeLabel"></span></p>
+      <a class="bar-link" href="#register" data-field="button"></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="register">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-text">
+            <p class="eyebrow" data-field="eyebrow"></p>
+            <h1 data-field="headline"></h1>
+            <p class="lede" data-field="subhead"></p>
+            <p class="disclaimer" data-field="disclaimer"></p>
+          </div>
+          <ul class="checks" data-list="checks"></ul>
+        </div>
+        <div class="card">
+          <p class="card-kicker" data-field="quizKicker"></p>
+          <p class="card-when"><span data-field="whenLabel"></span><span data-field="timeLabel"></span></p>
+          <div class="quiz" data-quiz></div>
+          <ul class="facts">
+            <li><span>Length</span><strong data-field="length"></strong></li>
+            <li><span>Where</span><strong data-field="where"></strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-section="benefits">
+      <div class="wrap">
+        <h2 data-field="sectionBenefits"></h2>
+        <div class="cards" data-list="benefits"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" data-section="agenda">
+      <div class="wrap narrow">
+        <h2 data-field="sectionAgenda"></h2>
+        <ol class="agenda" data-list="agenda"></ol>
+      </div>
+    </section>
+
+    <section class="section" data-section="fit">
+      <div class="wrap">
+        <h2 data-field="sectionFit"></h2>
+        <div class="cards" data-list="fit"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" data-section="faq">
+      <div class="wrap narrow">
+        <h2 data-field="sectionFaq"></h2>
+        <div class="faq" data-list="faqs"></div>
+      </div>
+    </section>
+
+    <section class="close" id="reserve">
+      <div class="wrap close-inner">
+        <h2 data-field="closeHeadline"></h2>
+        <p class="lede lede-on-dark" data-field="closeLede"></p>
+        <div class="card card-on-dark">
+          <p class="card-kicker" data-field="quizKicker"></p>
+          <div class="quiz" data-quiz></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p data-field="footer"></p>
+    </div>
+  </footer>
+
+  <script src="/js/sheet-post.js"></script>
+  <script src="campaign.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

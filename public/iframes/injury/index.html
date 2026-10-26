@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Injury evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="brand" href="#top">
+        <img data-field-src="logo" alt="">
+        <span class="brand-text">
+          <strong data-field="brand"></strong>
+          <em data-field="brandNote"></em>
+        </span>
+      </a>
+      <nav class="nav" data-paths="nav" aria-label="Injury type"></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-media" data-hero></div>
+      <div class="wrap hero-copy">
+        <h1><span data-field="headlineLead"></span> <strong data-field="headline"></strong></h1>
+        <p class="lede" data-field="subhead"></p>
+        <div class="paths" data-paths="hero"></div>
+        <div class="quiz" data-quiz hidden></div>
+      </div>
+    </section>
+
+    <section class="section" data-section="how">
+      <div class="wrap">
+        <h2 data-field="sectionHow"></h2>
+        <p class="section-lead" data-field="sectionHowLead"></p>
+        <div class="cards" data-list="how"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" data-section="guide">
+      <div class="wrap split">
+        <div>
+          <h2 data-field="sectionGuide"></h2>
+          <ul class="guide" data-list="guide"></ul>
+        </div>
+        <div class="faq" data-list="faqs"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p data-field="footer"></p>
+    </div>
+  </footer>
+
+  <script src="/js/sheet-post.js"></script>
+  <script src="campaign.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

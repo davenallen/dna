@@ -1,0 +1,238 @@
+.default--scrolling .dna-scroll-frame {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0)
+}
+
+.default--scrolling #scrollbar2 {
+    padding: 275px 0 120px
+}
+
+.default--scrolling .dna-sidebar #scrollbar2 {
+    padding: 125px 0 30px
+}
+
+
+body.default--scrolling {
+    background: #191923
+}
+
+.default--scrolling .dna-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto!important;
+    height: auto!important
+}
+
+.default--scrolling .dna-app {
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: visible
+}
+
+.default--scrolling .dna-app:before,.default--scrolling .dna-app:after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15px;
+    background: #191923;
+    z-index: 9999
+}
+
+.default--scrolling .dna-app:after {
+    top: auto;
+    bottom: 0
+}
+
+.default--scrolling.admin-bar .dna-app:before {
+    top: 32px
+}
+
+.default--scrolling.admin-bar .dna-preloader {
+    top: 32px
+}
+
+.default--scrolling .dna-app .dna-app-wrapper {
+    height: auto;
+    min-height: calc(100vh - 30px);
+    overflow: visible;
+    overflow-x: hidden
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-content,.default--scrolling.admin-bar .dna-app .dna-app-wrapper .dna-app-container .dna-content {
+    height: auto
+}
+
+.default--scrolling .dna-content .dna-scroll-frame,.default--scrolling.admin-bar .dna-content .dna-scroll-frame {
+    height: auto;
+    overflow: visible
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-info-bar {
+    position: fixed
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar-fix {
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: calc(100vh - 30px)
+}
+
+.default--scrolling.admin-bar .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar-fix {
+    height: calc(100vh - 62px)
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar {
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    width: 80px
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container:before {
+    content: '';
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    z-index: 9999;
+    background: #191923
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-content {
+    padding-left: 290px
+}
+
+.default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar.dna-active {
+    width: 230px
+}
+
+@media (max-width: 920px) {
+    .default--scrolling .dna-app .dna-app-wrapper {
+        min-height: 100vh
+    }
+
+    .default--scrolling #scrollbar2 {
+        padding-top: calc(275px + 64px)
+    }
+}
+
+@media (max-width: 1032px) {
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar-fix {
+        right:-80px
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container:before,.default--scrolling .dna-app:before,.default--scrolling .dna-app:after {
+        display: none
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-content {
+        padding-left: 0;
+        width: auto
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper {
+        height: auto
+    }
+
+    .default--scrolling.admin-bar .dna-app .dna-app-wrapper {
+        height: auto
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-content .dna-scroll-frame {
+        height: auto
+    }
+
+    .default--scrolling.admin-bar .dna-app .dna-app-wrapper .dna-app-container .dna-content .dna-scroll-frame {
+        height: auto
+    }
+
+    body.default--scrolling {
+        overflow: visible
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar {
+        height: 100vh!important
+    }
+
+    .default--scrolling .dna-app .dna-app-wrapper .dna-app-container .dna-info-bar {
+        height: 100vh!important
+    }
+
+    .default--scrolling.fixed .dna-app .dna-app-wrapper .dna-app-container .dna-info-bar {
+        top: 0
+    }
+
+    .default--scrolling.fixed .dna-app .dna-mobile-top-bar {
+        top: 0
+    }
+
+    .default--scrolling.fixed .dna-app .dna-app-wrapper .dna-app-container .dna-menu-bar {
+        top: 0
+    }
+}
+
+.default--scrolling .dna-content .dna-scroll-frame,.default--scrolling.admin-bar .dna-content .dna-scroll-frame {
+    transform: none!important;
+    -webkit-transform: none!important
+}
+
+@media (max-width: 1032px) {
+    .default--scrolling .footer {
+        margin-bottom: 20px
+    }
+}
+
+body .dna-content.dna-active {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+/* Cool Modern Scrollbar - Grok Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-dim);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #3b82f6;
+}
+
+/* For lighter themes, you can use this version instead */
+.light-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+.light-scroll::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

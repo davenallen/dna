@@ -1,0 +1,63 @@
+# David N Allen
+
+> Senior front-end engineer who builds production interfaces in React and Next.js, and the events those pages fire. JavaScript, CSS, and SCSS. Based in Lakewood, CO. Seeking a senior product seat.
+
+## Summary for hiring
+
+David N Allen builds production interfaces in React and Next.js. Matching a Figma spec and keeping a Sass codebase coherent is normal work. He owned membership and webinar flows, redirect and UTM logic, and GTM dataLayer events. The conversion readout stayed with the company. He can own a frontend without a large team around him.
+
+## Ideal roles
+
+- Senior Front-end Engineer, product
+- React / Next.js engineer who owns the UI and the CRO
+- Product frontend seat with Figma-to-Sass delivery
+
+## Core strengths
+
+- Production interfaces in React and Next.js
+- Registration, campaign, and pricing systems, and the events those pages fire
+- JavaScript, CSS, and SCSS, including a coherent Sass codebase
+- Matching a Figma spec in production
+- Membership and webinar flows
+- Redirect and UTM logic
+- GTM dataLayer events
+- Tests and weekly releases
+- Owning a frontend without a large team
+
+## Experience
+
+- CRO & UI/UX Specialist — Simpler Trading (2021–present): the page, the redirect and UTM handoff, and GTM dataLayer events for membership and webinar registration. The conversion readout stayed with the company.
+- Lead UI/UX Designer — Leading Response (2017–2021): marketing products, and the analytics and testing frameworks the campaigns ran on
+- Interactive Manager — Adperio (2013–2017): B2B/B2C digital and print communication
+
+## Education
+
+- BA, Visual Communication — Art Institute International
+
+## Contact
+
+- Email: david@davidnallen.com
+- Location: Lakewood, CO (remote-friendly)
+- Resume: https://www.davidnallen.com/files/dna-resume-2026.pdf
+- Site: https://www.davidnallen.com
+- LinkedIn: https://www.linkedin.com/in/david-allen-a528a74/
+
+## Why hire him
+
+1. Design + code in one seat reduces handoff waste.
+2. Work is oriented to business outcomes (leads, conversion), not decoration.
+3. Comfortable with marketing velocity and campaign deadlines.
+4. Cross-functional communicator across product, marketing, and leadership.
+5. Senior judgment with hands-on implementation.
+6. Documents process so quality scales beyond one person.
+
+## Selected case studies
+
+- Registration Path — membership and webinar signup, with the UTM kept through the redirect and GTM dataLayer events on the view and the completion
+- Campaign Launch Kit — one campaign record drives the calendar invite, the timed redirects (registration, replay, next webinar), and the page modules
+- Membership Pricing Module — comparison UI for membership options (HTML/CSS/JS), including how the same piece is a React component
+- Responsive Offer Table — mobile-first pricing table that becomes stacked cards below 900px
+- High-Conversion Sales Landing Page — Simpler Trading product sales page (WordPress and JavaScript)
+- Email Signup Landing Page — a standalone registration template in /iframes/registration/. Copy the folder and edit campaign.js to start another page. After the email, the page asks for an SMS 30 minutes before. Any phone number is accepted. Form data is kept for demonstration purposes only and will not be sold or shared.
+- Personal Brand Site (Next.js) — hire-ready site built in React/Next.js with positioning, case studies, and recruiter-friendly metadata
+- Earlier brand and motion — Consonance Productions, The Keep Recording Studio, Artillery Creative, and a product sizzle reel

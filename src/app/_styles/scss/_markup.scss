@@ -1,0 +1,619 @@
+/* ------------------------------
+
+app marcup
+
+------------------------------ */
+/* ----- top background ----- */
+.dna-top-bg {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-position: center;
+  height: 400px;
+  background-size: cover;
+
+  & .dna-top-bg-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: $top-bg-gradient;
+  }
+}
+/* ----- preloader ----- */
+.dna-preloader {
+  margin: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
+  background: $info-bar-1-color;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .dna-preloader-content {
+    margin-bottom: 15px;
+    text-align: center;
+
+    & .dna-preloader-load {
+      margin-top: 5px;
+      width: 200px;
+
+      & .progressbar-text {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400 !important;
+        color: $text-color-2 !important;
+        height: 300px;
+        line-height: 350px;
+      }
+    }
+  }
+}
+.dna-preloader-load {
+  & path {
+    &:first-child {
+      stroke: $deep-color;
+    }
+    &:last-child {
+      stroke: $main-color;
+    }
+  }
+}
+/* ----- scroll frame ----- */
+.dna-scroll-frame {
+  width: 100%;
+  height: calc(100vh - 30px);
+}
+
+.dna-content.dna-active .dna-scroll-frame {
+  position: relative;
+  z-index: 1;
+}
+
+.scrollbar-track {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+/* ----- app ----- */
+.dna-app {
+  padding: 15px;
+  background: $deep-color;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  & * {
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  /* ----- mobile top bar ----- */
+  & .dna-mobile-top-bar {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 70px;
+    background: $info-bar-1-color;
+    box-shadow: $shadow-1;
+    padding: 0 30px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .dna-app-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $content-color;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: $shadow-1;
+
+    & .dna-app-container {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      /* ----- info bar ----- */
+      & .dna-info-bar {
+        background: $info-bar-1-color;
+        width: 290px;
+        min-width: 290px;
+        height: calc(100vh - 30px);
+        position: relative;
+        z-index: 999;
+        box-shadow: $shadow-1;
+        transition: $tr-lg;
+
+        & .dna-info-bar-frame {
+          padding: 0 15px;
+
+          & .dna-info-bar-header {
+            width: 100%;
+            height: 70px;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 999999999999;
+            display: none;
+
+            & .dna-info-bar-btn {
+              margin-left: auto;
+              pointer-events: all;
+              font-size: 14px;
+              padding: 30px;
+
+              &.dna-disabled {
+                opacity: 0;
+                pointer-events: none;
+              }
+            }
+          }
+
+          & .dna-scroll-frame {
+            & .scroll-content {
+              padding: 260px 0 120px;
+            }
+          }
+        }
+      }
+      /* ----- content ----- */
+      & .dna-content {
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        height: calc(100vh - 30px);
+        padding-right: 80px;
+        transition: $tr-lg;
+
+        & .dna-curtain {
+          background: $content-color-s-light;
+          position: absolute;
+          z-index: 9;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          opacity: 0;
+          transition: $tr-lg;
+        }
+
+        &.dna-active {
+          transform: translateX(-150px);
+
+          & .dna-curtain {
+            pointer-events: all;
+            opacity: 0.7;
+            cursor: pointer;
+          }
+        }
+      }
+      /* ----- menu bar ----- */
+      & .dna-menu-bar {
+        background: $info-bar-1-color;
+        width: 230px;
+        height: calc(100vh - 30px);
+        position: absolute;
+        z-index: 99;
+        right: -150px;
+        top: 0;
+        bottom: 0;
+        box-shadow: $shadow-1;
+        transition: $tr-lg;
+
+        & .dna-menu-bar-frame {
+          position: relative;
+
+          & .dna-menu-bar-header {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            box-shadow: $shadow-2;
+            background: $info-bar-2-color-light;
+
+            & .dna-menu-bar-btn {
+              pointer-events: all;
+
+              &.dna-disabled {
+                opacity: 0;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+
+        &.dna-active {
+          transform: translateX(-150px);
+        }
+      }
+    }
+  }
+}
+/* ------------------------------
+
+app marcup (after 920px)
+
+------------------------------ */
+@media (max-width: 920px) {
+  /* ----- container ----- */
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* ----- preloader ----- */
+  .dna-preloader {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  /* ----- scroll frame ----- */
+  .dna-scroll-frame {
+    height: 100vh;
+  }
+
+  .dna-app {
+    --dna-mobile-bar: 64px;
+  }
+
+  #scrollbar > .container-fluid:first-child {
+    padding-top: var(--dna-mobile-bar);
+  }
+
+  .dna-app {
+    padding: 0;
+
+    & .dna-app-wrapper {
+      border-radius: 0;
+      height: 100vh;
+
+      & .dna-app-container {
+        width: 100%;
+        /* ----- info bar ----- */
+        /* Keep 92px clear of the nav toggle. Slide with left, not
+           transform: a transform makes this fixed bar's percentage
+           width fall back to 290px and the panel runs under the nav. */
+        & .dna-info-bar {
+          position: absolute;
+          width: #{'min(290px, calc(100% - 92px))'};
+          min-width: 0;
+          left: #{'calc(min(290px, calc(100% - 92px)) * -1)'};
+          height: 100vh;
+          z-index: 1000;
+
+          &.dna-active {
+            left: 0;
+            transform: none;
+            z-index: 1001;
+          }
+
+          & .dna-info-bar-frame {
+            & .dna-info-bar-header {
+              display: flex;
+
+              & .dna-info-bar-btn {
+                position: fixed;
+                top: 18px;
+                left: 14px;
+                z-index: 2;
+                margin: 0;
+                width: 44px;
+                height: 44px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: none;
+                cursor: pointer;
+
+                & span,
+                & span:before,
+                & span:after {
+                  content: "";
+                  display: block;
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                  background: $text-color-1;
+                  transition: $tr-md;
+                  backface-visibility: hidden;
+                  background: var(--color-danger);
+                }
+
+                & span {
+                  position: relative;
+                  transform: none;
+
+                  &:before,
+                  &:after {
+                    position: absolute;
+                    left: 0;
+                    transform: none;
+                    transform-origin: center;                    
+                  }
+
+                  &:before {
+                    top: -8px;                    
+                    background: var(--color-accent);
+                  }
+
+                  &:after {
+                    top: 8px;                    
+                    background: var(--color-success);                                        
+                  }
+                }
+
+                &.dna-active span {
+                  width: 15px;
+                  height: 3px;
+                  border-radius: 1px;
+                  background: $text-color-2;
+                  transform: rotate(45deg);
+
+                  &:before,
+                  &:after {
+                    width: 15px;
+                    height: 3px;
+                    border-radius: 1px;
+                    background: $text-color-2;
+                  }
+
+                  &:before {
+                    top: -5px;
+                    transform: translate(0, 5px) rotate(-90deg);
+                  }
+
+                  &:after {
+                    top: 5px;
+                    transform: translate(0, -5px) rotate(-90deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+        /* ----- content ----- */
+        & .dna-content {
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          padding-right: 0;
+
+          &.dna-active {
+            transform: none;
+
+            & .dna-curtain {
+              pointer-events: all;
+              opacity: 1;
+            }
+          }
+        }
+        /* ----- menu bar ----- */
+        & .dna-menu-bar {
+          position: absolute;
+          right: -230px;
+          width: 230px;
+          height: 100vh;
+          z-index: 1000;
+
+          &.dna-active {
+            transform: translateX(-230px);
+          }
+
+          & .dna-menu-bar-btn {
+            transform: translateX(-80px);
+            transition: $tr-md;
+          }
+
+          &.dna-active {
+            & .dna-menu-bar-btn {
+              transform: translateX(0);
+            }
+          }
+        }
+
+        /* The nav toggle lives in the right gutter. Park it while the
+           profile drawer is open so it cannot cover the dismiss strip. */
+        & .dna-info-bar.dna-active ~ .dna-menu-bar-fix .dna-menu-bar-btn {
+          transform: translateX(0);
+          pointer-events: none;
+        }
+      }
+    }
+
+    .dna-mobile-top-bar {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 44px;
+      align-items: center;
+      column-gap: 8px;
+      position: fixed;
+      z-index: 1100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--dna-mobile-bar);
+      padding: 0 10px;
+      background: $info-bar-1-color;
+      box-shadow: $shadow-1;
+
+      .dna-mobile-logo-link {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+      }
+
+      .dna-mobile-logo {
+        display: block;
+        height: 28px;
+        width: auto;
+        max-width: min(148px, 42vw);
+      }
+
+      .dna-info-bar-btn,
+      .dna-menu-bar-btn {
+        position: relative;
+        margin: 0;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: none;
+        cursor: pointer;
+      }
+
+      .dna-menu-bar-btn span {
+        margin: 0;
+      }
+
+      .dna-info-bar-btn {
+        span,
+        span:before,
+        span:after {
+          content: "";
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: var(--color-danger);
+          transition: $tr-md;
+          backface-visibility: hidden;
+        }
+
+        span {
+          position: relative;
+          transform: none;
+
+          &:before,
+          &:after {
+            position: absolute;
+            left: 0;
+            transform: none;
+            transform-origin: center;
+          }
+
+          &:before {
+            top: -8px;
+            background: var(--color-accent);
+          }
+
+          &:after {
+            top: 8px;
+            background: var(--color-success);
+          }
+        }
+
+        &.dna-active span {
+          width: 15px;
+          height: 3px;
+          border-radius: 1px;
+          background: $text-color-2;
+          transform: rotate(45deg);
+
+          &:before,
+          &:after {
+            width: 15px;
+            height: 3px;
+            border-radius: 1px;
+            background: $text-color-2;
+          }
+
+          &:before {
+            top: -5px;
+            transform: translate(0, 5px) rotate(-90deg);
+          }
+
+          &:after {
+            top: 5px;
+            transform: translate(0, -5px) rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    @at-root html[data-theme="dark"] .dna-mobile-logo {
+      filter: invert(1);
+    }
+
+    .dna-app-wrapper .dna-app-container {
+      .dna-info-bar .dna-header {
+        top: var(--dna-mobile-bar);
+      }
+
+      .dna-info-bar .dna-info-bar-frame .dna-info-bar-header .dna-info-bar-btn,
+      .dna-menu-bar .dna-menu-bar-btn {
+        display: none;
+      }
+
+      .dna-menu-bar .dna-menu-bar-frame .dna-menu-bar-header,
+      .dna-menu-bar .dna-current-page {
+        display: none;
+      }
+
+      .dna-menu-bar .dna-scroll-frame {
+        padding-top: var(--dna-mobile-bar);
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+/* ------------------------------
+
+app marcup (after 290px)
+
+------------------------------ */
+@media (max-width: 290px) {
+  .dna-app {
+    /* ----- info bar ----- */
+    & .dna-app-wrapper .dna-app-container .dna-info-bar {
+      width: #{'calc(100% - 92px)'};
+      left: #{'calc((100% - 92px) * -1)'};
+    }
+  }
+}
+/* ------------------------------
+
+app marcup (after 230px)
+
+------------------------------ */
+@media (max-width: 230px) {
+  .dna-app {
+    /* ----- menu bar ----- */
+    & .dna-menu-bar {
+      width: 100vw;
+    }
+  }
+}
+
+.dna-app-onepage {
+  & .dna-app-wrapper {
+    & .dna-app-container {
+      & .dna-content {
+        padding-right: 0;
+      }
+    }
+  }
+}

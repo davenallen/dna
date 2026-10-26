@@ -1,0 +1,17 @@
+{
+    "title": "Recommendations",
+    "items": [
+        {
+            "name": "Rachel",
+            "image": "/img/testimonials/rachel-cohen.jpg",
+            "role": "PMP, Certified Scrum Product Owner",
+            "text": "I had the opportunity to work with David on a variety of website and development projects at Simpler Trading. David was always quick to jump in when something needed attention and willing to take initiative to identify opportunities for improvement. He brings a creative perspective to his work, particularly when it comes to UX/UI and finding ways to enhance the user experience."
+        },
+        {
+            "name": "Cody",
+            "image": "/img/testimonials/cody-huelster.jpg",
+            "role": "Director of Sales",
+            "text": "I worked with David Allen, better known as Hoff, at Simpler Trading, and he's one of the most talented people I've worked with in marketing technology. He's an exceptional developer with a strong understanding of funnel design, conversion rate optimization, and how to build pages that help a business sell."
+        }
+    ]
+}

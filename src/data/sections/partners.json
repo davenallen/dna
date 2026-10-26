@@ -1,0 +1,45 @@
+{
+    "title": "Tools I use daily",
+    "items": [
+        {
+            "image": "/img/brands/adobe.png",
+            "alt": "Adobe logo",
+            "title": "Adobe"
+        },
+        {
+            "image": "/img/brands/vs-code.png",
+            "alt": "VS Code logo",
+            "title": "VS Code"
+        },
+        {
+            "image": "/img/brands/grok.png",
+            "alt": "Grok logo",
+            "title": "Grok"
+        },
+        {
+            "image": "/img/brands/react.png",
+            "alt": "React logo",
+            "title": "React"
+        },
+        {
+            "image": "/img/brands/npm.png",
+            "alt": "NPM logo",
+            "title": "NPM"
+        },
+        {
+            "image": "/img/brands/js-logo.png",
+            "alt": "JavaScript logo",
+            "title": "JavaScript"
+        },
+        {
+            "image": "/img/brands/ga.png",
+            "alt": "Google Analytics",
+            "title": "Google Analytics"
+        },
+        {
+            "image": "/img/brands/git.png",
+            "alt": "Git",
+            "title": "Git"
+        }
+    ]
+}

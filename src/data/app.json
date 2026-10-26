@@ -1,0 +1,154 @@
+{
+    "settings": {
+        "siteName": "David N. Allen",
+        "siteDescription": "David N. Allen is a senior front-end engineer in Lakewood, CO. He builds production interfaces in React and Next.js, and the registration, campaign, and pricing systems those pages run on, including UTM handoff and GTM dataLayer events. Seeking a senior product seat.",
+        "siteKeywords": "David N. Allen, senior front-end engineer, React, Next.js, CRO, conversion rate optimization, JavaScript, CSS, SCSS, Sass, Figma, GTM, Lakewood, product frontend",
+        "formspreeURL": "https://formspree.io/f/xnjwwkvd",
+        "mailchimp": {
+            "url": "",
+            "key": ""
+        },
+        "perPage": 6
+    },
+    "profile": {
+        "avatar": "/img/me.jpg",
+        "name": "David N. Allen",
+        "role": "Senior Front-end Engineer<br>React, Next.js &amp; CRO",
+        "availability": "Senior product seat",
+        "info": [
+            {
+                "label": "Role",
+                "value": "Front-end · React · Next.js · CRO"
+            },
+            {
+                "label": "Degree",
+                "value": "BA, Visual Communication"
+            },
+            {
+                "label": "Location",
+                "value": "Lakewood, CO"
+            },
+            {
+                "label": "Status",
+                "value": "Senior product seat"
+            },
+            {
+                "label": "Resume",
+                "value": "<a href=\"/files/dna-resume-2026.pdf\" target=\"_blank\" rel=\"noopener\" class=\"dna-resume-link\"><i class=\"fas fa-file-pdf\"></i> Download PDF</a>"
+            }
+        ],
+        "skills": {
+            "chips": [
+                "JavaScript",
+                "React",
+                "Next.js",
+                "CRO",
+                "CSS",
+                "SCSS",
+                "Figma",
+                "Adobe",
+                "GTM",
+                "Sass"
+            ],
+            "knowledge": [
+                {
+                    "category": "Build",
+                    "items": ["AI", "React", "Next.js", "JavaScript", "CSS", "SCSS", "Node.js", "Sass", "Gulp", "Webpack"]
+                },
+                {
+                    "category": "Product",
+                    "items": ["CRO", "Figma", "Adobe", "Marketing flows", "Live Webinar flows", "GTM dataLayer", "UTM and redirects"]
+                },
+                {
+                    "category": "Delivery",
+                    "items": ["Tests", "Weekly releases", "Git", "Own the frontend"]
+                }
+            ]
+        },
+        "resume": "/files/dna-resume-2026.pdf"
+    },
+    "header": {
+        "topBackground": "/img/bg-1.jpg",
+        "menu": [
+            {
+                "label": "Home",
+                "link": "/",
+                "children": 0
+            },
+            {
+                "label": "Work",
+                "link": "/projects",
+                "children": [
+                    {
+                        "label": "Web",
+                        "link": "/projects?category=web-templates"
+                    },
+                    {
+                        "label": "Web System",
+                        "link": "/projects?category=web-system"
+                    },
+                    {
+                        "label": "UI Elements",
+                        "link": "/projects?category=ui-elements"
+                    },
+                    {
+                        "label": "All",
+                        "link": "/projects"
+                    }
+                ]
+            },
+            {
+                "label": "Experience",
+                "link": "/history",
+                "children": 0
+            },
+            {
+                "label": "Contact",
+                "link": "/contact",
+                "children": 0
+            },
+            {
+                "label": "System",
+                "link": "/system",
+                "children": 0
+            }
+        ]
+    },
+    "footer": {
+        "copy": "© 2026 David N Allen. All rights reserved.",
+        "developer": "<img src='/img/brands/react.png' style='width: 50px; height: auto;' alt='Developed with React' title='Developed with React' /> <img src='/img/brands/next-js.png' style='width: 50px; height: auto;' alt='Developed with Next.js' title='Developed with Next.js' />"
+    },
+    "social": [
+        {
+            "link": "https://www.linkedin.com/in/david-allen-a528a74/",
+            "icon": "fab fa-linkedin-in",
+            "title": "LinkedIn"
+        },
+        {
+            "link": "https://x.com/DavidAl66448560",
+            "icon": "fab fa-x-twitter",
+            "title": "X"
+        },
+        {
+            "link": "https://www.facebook.com/DavidNAllenDesign/",
+            "icon": "fab fa-facebook-f",
+            "title": "Facebook"
+        }
+    ],
+    "projects": {
+        "categories": [
+            {
+                "name": "Web",
+                "slug": "web-templates"
+            },
+            {
+                "name": "Web System",
+                "slug": "web-system"
+            },
+            {
+                "name": "UI Elements",
+                "slug": "ui-elements"
+            }
+        ]
+    }
+}

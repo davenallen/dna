@@ -1,0 +1,21 @@
+{
+    "title": "Experience snapshot",
+    "viewAll": {
+        "link": "/history",
+        "label": "Full experience"
+    },
+    "items": [
+        {
+            "title": "CRO & UI/UX Specialist",
+            "subtitle": "Simpler Trading",
+            "date": "2021 – 2026",
+            "text": "Owned the page, the redirect and UTM handoff, and the GTM dataLayer events for membership and webinar registration. Shipped on a weekly release. The conversion readout stayed with the company."
+        },
+        {
+            "title": "Lead UI/UX Designer",
+            "subtitle": "Leading Response",
+            "date": "2017 – 2021",
+            "text": "Led design and development for marketing products. Built the analytics and testing frameworks the campaigns ran on."
+        }
+    ]
+}

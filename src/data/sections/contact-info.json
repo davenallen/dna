@@ -1,0 +1,25 @@
+{
+    "title": "Contact information",
+    "items": [
+        {
+            "info": [
+                {
+                    "label": "Country",
+                    "value": "USA"
+                },
+                {
+                    "label": "City",
+                    "value": "Lakewood"
+                }
+            ]
+        },
+        {
+            "info": [
+                {
+                    "label": "Email",
+                    "value": "david@davidnallen.com"
+                }
+            ]
+        }
+    ]
+}

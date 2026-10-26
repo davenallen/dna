@@ -1,0 +1,39 @@
+// Values live in src/design/tokens.js and are injected as custom properties on <html>.
+// These aliases keep the existing theme pointed at that file.
+
+$main-color: var(--color-accent);
+
+$shadow-1: var(--shadow-md);
+$shadow-2: var(--shadow-sm);
+
+$tr-lg: var(--motion-slow);
+$tr-md: var(--motion-medium);
+$tr-sm: var(--motion-fast);
+
+$text-neon: var(--shadow-text);
+
+$card-color: var(--color-card);
+$card-color-light: var(--color-card-98);
+$card-color-s-light: var(--color-card-88);
+
+$info-bar-1-color: var(--color-info-bar);
+$info-bar-1-color-light: var(--color-info-bar-98);
+$info-bar-1-color-s-light: var(--color-info-bar-88);
+
+$info-bar-2-color: var(--color-info-bar-alt);
+$info-bar-2-color-light: var(--color-info-bar-alt-98);
+$info-bar-2-color-s-light: var(--color-info-bar-alt-88);
+
+$content-color: var(--color-surface);
+$content-color-light: var(--color-surface-98);
+$content-color-s-light: var(--color-surface-88);
+
+$deep-color: var(--color-deep);
+$deep-color-light: var(--color-deep-98);
+$deep-color-s-light: var(--color-deep-88);
+
+$text-color-1: var(--color-text);
+$text-color-2: var(--color-text-muted);
+$text-color-3: var(--color-text-dim);
+
+$top-bg-gradient: var(--gradient-top);

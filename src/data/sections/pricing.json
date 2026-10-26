@@ -1,0 +1,113 @@
+{
+    "title": "Price Plans",
+    "items": [
+        {
+            "title": "Starter Price",
+            "price": {
+                "before": "",
+                "value": "FREE<sup>*</sup>",
+                "after": ""
+            },
+            "list": [
+                {
+                    "value": "UI Design",
+                    "active": 1
+                },
+                {
+                    "value": "Web Development",
+                    "active": 1
+                },
+                {
+                    "value": "Logo design",
+                    "active": 0
+                },
+                {
+                    "value": "SEO optimization",
+                    "active": 0
+                },
+                {
+                    "value": "Wordpress integration",
+                    "active": 0
+                }
+            ],
+            "button": {
+                "link": "/contact",
+                "label": "Order now"
+            },
+            "info": "<sup>*</sup>Free only when ordering paid services",
+            "popular": 0
+        },
+        {
+            "title": "Hourly payment",
+            "price": {
+                "before": "$",
+                "value": "29",
+                "after": "h"
+            },
+            "list": [
+                {
+                    "value": "UI Design",
+                    "active": 1
+                },
+                {
+                    "value": "Web Development",
+                    "active": 1
+                },
+                {
+                    "value": "Logo design",
+                    "active": 1
+                },
+                {
+                    "value": "SEO optimization",
+                    "active": 0
+                },
+                {
+                    "value": "Wordpress integration",
+                    "active": 0
+                }
+            ],
+            "button": {
+                "link": "/contact",
+                "label": "Order now"
+            },
+            "info": "",
+            "popular": 1
+        },
+        {
+            "title": "Full time",
+            "price": {
+                "before": "$",
+                "value": "2999",
+                "after": "h"
+            },
+            "list": [
+                {
+                    "value": "UI Design",
+                    "active": 1
+                },
+                {
+                    "value": "Web Development",
+                    "active": 1
+                },
+                {
+                    "value": "Logo design",
+                    "active": 1
+                },
+                {
+                    "value": "SEO optimization",
+                    "active": 1
+                },
+                {
+                    "value": "Wordpress integration",
+                    "active": 1
+                }
+            ],
+            "button": {
+                "link": "/contact",
+                "label": "Order now"
+            },
+            "info": "",
+            "popular": 0
+        }
+    ]
+}

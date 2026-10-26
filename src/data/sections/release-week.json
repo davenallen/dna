@@ -1,0 +1,30 @@
+{
+    "title": "A release week",
+    "intro": "Spec, Sass, the page, the events, the test, and the ship. This is what owning the frontend looks like.",
+    "items": [
+        {
+            "title": "Design spec",
+            "text": "The frame arrives with type, space, and the states the page needs. Matching it is how the week starts."
+        },
+        {
+            "title": "Sass",
+            "text": "Tokens and components stay coherent with that spec. The new page uses the system that is already in the codebase."
+        },
+        {
+            "title": "The page",
+            "text": "A membership offer, a webinar registration, or a pricing UI lands as a real page, with the layout and the JavaScript that make the decision obvious."
+        },
+        {
+            "title": "The events",
+            "text": "GTM dataLayer events record the view and the signup. UTM values are still on those events after a redirect."
+        },
+        {
+            "title": "Testing",
+            "text": "The path is exercised before it ships: the redirect, the parameters, the event, and the layout on a phone."
+        },
+        {
+            "title": "Ship it",
+            "text": "It goes out in the weekly release. The next offer reuses the page, the events, and the Sass."
+        }
+    ]
+}

@@ -34,6 +34,7 @@ const InfoBarModule = () => {
     commitRef.current = commitInfo;
 
     const barOpen = () => commitInfo(!toggleRef.current, true);
+    const closeInfo = () => commitInfo(false, true);
 
     useEffect(() => {
         const onOtherDrawer = (event) => {
@@ -166,7 +167,7 @@ const InfoBarModule = () => {
                         >
                             Resume
                         </Button>
-                        <Button href="/contact" variant="secondary" size="sm" className="dna-sidebar-cta-btn">
+                        <Button href="/contact" variant="secondary" size="sm" className="dna-sidebar-cta-btn" onClick={closeInfo}>
                             Contact
                         </Button>
                     </div>

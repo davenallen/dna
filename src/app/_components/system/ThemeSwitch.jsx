@@ -5,8 +5,14 @@ import { track } from "@library/visit";
 
 const STORAGE_KEY = "dna-theme";
 
+function paintTheme(next) {
+  document.documentElement.setAttribute("data-theme", next);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", next === "light" ? "#f6f7fb" : "#1e1e28");
+}
+
 export function ThemeSwitch({ className = "" }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const read = () => {
@@ -20,7 +26,7 @@ export function ThemeSwitch({ className = "" }) {
 
   function toggle() {
     const next = theme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", next);
+    paintTheme(next);
     try {
       localStorage.setItem(STORAGE_KEY, next);
     } catch {

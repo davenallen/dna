@@ -139,8 +139,13 @@ const Layouts = ({
   children
 }) => {
   return (
-    <html lang="en" data-theme="light" className={`${headline_font.variable} ${body_font.variable} ${secondary_font.variable}`} style={cssVars}>
+    <html lang="en" data-theme="dark" className={`${headline_font.variable} ${body_font.variable} ${secondary_font.variable}`} style={cssVars}>
       <head>
+        <meta name="theme-color" content="#1e1e28" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <script dangerouslySetInnerHTML={{ __html: themeBoot }} />
         <style dangerouslySetInnerHTML={{ __html: themeCss }} />
         <script

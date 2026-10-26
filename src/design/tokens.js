@@ -273,7 +273,7 @@ export const themeCss = `html{color-scheme:dark}html[data-theme="light"]{color-s
   .map(([name, value]) => `${name}:${value}!important`)
   .join(";")}}`;
 
-export const themeBoot = `(function(){try{var t=localStorage.getItem("dna-theme");if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
+export const themeBoot = `(function(){try{var t=localStorage.getItem("dna-theme");if(t!=="light"&&t!=="dark")t="dark";document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="light"?"#f6f7fb":"#1e1e28");}catch(e){}})();`;
 
 export const groupOrder = ["color", "type", "space", "radius", "shadow", "motion"];
 

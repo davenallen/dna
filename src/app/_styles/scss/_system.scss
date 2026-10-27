@@ -164,6 +164,18 @@
 .ds-theme-switch-icon {
   display: block;
   transform: translateY(-1px);
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 18px;
+
+  &.is-on {
+    font-variant-emoji: emoji;
+  }
+
+  &.is-off {
+    font-variant-emoji: text;
+    filter: grayscale(1);
+    opacity: 0.72;
+  }
 }
 
 .ds-live-embed {

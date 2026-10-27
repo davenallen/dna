@@ -669,6 +669,15 @@ button
   }
 }
 
+.dna-project-title .dna-title-frame h4 {
+  font-size: 17px;
+  line-height: 1.25;
+
+  @media (min-width: 921px) {
+    font-size: 22px;
+  }
+}
+
 .dna-case-lede {
   max-width: 760px;
   color: $text-color-2;

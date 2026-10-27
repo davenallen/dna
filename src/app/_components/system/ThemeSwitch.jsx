@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { track } from "@library/visit";
 
 const STORAGE_KEY = "dna-theme";
+const BULB_ON = "\u{1F4A1}\u{FE0F}";
+const BULB_OFF = "\u{1F4A1}\u{FE0E}";
 
 function paintTheme(next) {
   document.documentElement.setAttribute("data-theme", next);
@@ -46,8 +48,8 @@ export function ThemeSwitch({ className = "" }) {
       aria-pressed={isLight}
       aria-label={isLight ? "Switch to dark" : "Switch to light"}
     >
-      <span className="ds-theme-switch-icon" aria-hidden="true">
-        {isLight ? "☾" : "☀"}
+      <span className={`ds-theme-switch-icon${isLight ? " is-on" : " is-off"}`} aria-hidden="true">
+        {isLight ? BULB_ON : BULB_OFF}
       </span>
     </button>
   );

@@ -26,11 +26,54 @@ export async function generateMetadata({ params }) {
   }
 }
 
-function caseStudyParts(postData) {
-  const html = postData.description?.content || "";
+const BELOW_MARKER = "<!--below-->";
+
+function caseStudyParts(html, carousel) {
   const marker = "<!--shots-->";
-  if (!html.includes(marker) || !postData.carousel) return [html];
+  if (!html.includes(marker) || !carousel) return [html];
   return html.split(marker);
+}
+
+function CaseStudyBlock({ title, html, carousel, showTitle = true, button }) {
+  if (!html || !html.trim()) return null;
+  const parts = caseStudyParts(html, carousel);
+
+  return (
+    <div className="container-fluid">
+      <div className="row p-30-0">
+        <div className="col-lg-12">
+          <Card className="dna-case-body">
+            {showTitle && title ? <h5 className="mb-15">{title}</h5> : null}
+            <div className="dna-case-content mb-15">
+              {parts.map((part, partIndex) => (
+                <div key={`case-part-${partIndex}`}>
+                  {part.trim() ? <div dangerouslySetInnerHTML={{ __html: part }} /> : null}
+                  {partIndex < parts.length - 1 ? (
+                    <Suspense fallback={null}>
+                      <CaseShots items={carousel} />
+                    </Suspense>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+            {button !== undefined && (
+              <div className="dna-buttons-frame">
+                <TextLink
+                  native
+                  href={button.link || button.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-no-swup
+                >
+                  {button.label}
+                </TextLink>
+              </div>
+            )}
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 async function ProjectDetail ( { params } ) {
@@ -51,6 +94,10 @@ async function ProjectDetail ( { params } ) {
 
   const metaItems = postData.details?.items || [];
   const isLiveModule = Boolean(postData.module) || (postData.category_slug === "ui-elements" && Boolean(postData.iframe));
+  const caseHtml = postData.description?.content || "";
+  const argumentFirst = Boolean(postData.embed && postData.iframe && !isLiveModule && caseHtml.includes(BELOW_MARKER));
+  const caseLead = argumentFirst ? caseHtml.split(BELOW_MARKER)[0] : "";
+  const caseFollow = argumentFirst ? caseHtml.split(BELOW_MARKER).slice(1).join(BELOW_MARKER) : caseHtml;
   const usedOnPage = new Set(["web-system", "ui-elements"]);
   const embedPills = (Array.isArray(postData.uses) ? postData.uses : [])
     .map((id) => projects.find((project) => project.id === id))
@@ -63,6 +110,7 @@ async function ProjectDetail ( { params } ) {
           <div className="row p-30-0">
             <div className="col-lg-12">
               <SectionTitle
+                className="dna-project-title"
                 title={postData.title}
                 aside={<div className="dna-project-category">{postData.category}</div>}
               />
@@ -82,6 +130,14 @@ async function ProjectDetail ( { params } ) {
             </div>
           </div>
         </div>
+
+        {argumentFirst ? (
+          <CaseStudyBlock
+            title={postData.description?.title}
+            html={caseLead}
+            carousel={postData.carousel}
+          />
+        ) : null}
 
         {isLiveModule ? (
           <>
@@ -141,40 +197,13 @@ async function ProjectDetail ( { params } ) {
           </Suspense>
         ) : null}
 
-        <div className="container-fluid">
-          <div className="row p-30-0">
-            <div className="col-lg-12">
-              <Card className="dna-case-body">
-                <h5 className="mb-15">{postData.description.title}</h5>
-                <div className="dna-case-content mb-15">
-                  {caseStudyParts(postData).map((part, partIndex, parts) => (
-                    <div key={`case-part-${partIndex}`}>
-                      {part.trim() ? <div dangerouslySetInnerHTML={{ __html: part }} /> : null}
-                      {partIndex < parts.length - 1 ? (
-                        <Suspense fallback={null}>
-                          <CaseShots items={postData.carousel} />
-                        </Suspense>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-                {postData.description.button !== undefined && (
-                  <div className="dna-buttons-frame">
-                    <TextLink
-                      native
-                      href={postData.description.button.link || postData.description.button.label}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-swup
-                    >
-                      {postData.description.button.label}
-                    </TextLink>
-                  </div>
-                )}
-              </Card>
-            </div>
-          </div>
-        </div>
+        <CaseStudyBlock
+          title={postData.description?.title}
+          html={caseFollow}
+          carousel={postData.carousel}
+          showTitle={!argumentFirst}
+          button={postData.description?.button}
+        />
 
         {!isLiveModule && postData.gallery !== undefined && (
           <Suspense fallback={<div>Loading...</div>}>

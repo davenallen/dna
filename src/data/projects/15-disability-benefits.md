@@ -9,24 +9,30 @@ embed: true
 uses:
   - 10-campaign-launch-kit
   - 14-lead-generation
-summary: A sample briefing on Social Security disability benefits. The card is the lead quiz, in a navy, blue, and gold palette. Form data is kept for demonstration purposes only and will not be sold or shared.
+summary: A briefing only helps if someone finishes it. One question at a time, then a name. The page is built to move quiz completion, and it does not file a claim.
 
 #full details
 description:
   title: Case study
   content: |
     <p><strong>Role:</strong> Front-end and CRO</p>
-    <p><strong>Context:</strong> A second landing page on the registration template. The subject is a public briefing on Social Security disability benefits. The page is a sample. It is not a government site.</p>
-    <h5>The decision</h5>
-    <p>The layout stays: a split hero, the card, what the briefing covers, the agenda, who it is for, questions, and the card again. The card is the <a href="/projects/14-lead-generation/">lead quiz</a>: one question, a short note, then name, email, phone, and ZIP. The result stays on the page. Navy, official blue, and a gold rule replace the red and green of the session page.</p>
-    <h5>What I owned</h5>
+    <p>A briefing on Social Security disability benefits only helps if someone can finish it. A page that leads with the whole explanation, then asks for a name and a phone number, requests a claim before the person understands the program. This page is a sample. It is not a government site, and it does not file a claim.</p>
+    <p>Keep the briefing, and make the card one question at a time. An age range, a few yes or no questions, a short note, then name, email, phone, and ZIP. The result stays on the page. What the briefing covers, the agenda, who it is for, and the questions stay for anyone who needs the reason first. The same card returns at the bottom.</p>
+    <p>The outcome to move is a completed quiz: someone who answers the questions, passes the contact step, and sees the sample result. The step events show where people stop on the way there.</p>
+    <h5>The friction</h5>
+    <p>The first screen has two jobs. The briefing is long enough that a ready visitor has to find the card. A card that shows every question and the contact fields at once asks for a name before the person has answered anything about the program. Someone trying to tell Disability Insurance from Supplemental Security Income never gets a next step that matches that question.</p>
+    <h5>The opportunity</h5>
+    <p>Give the card one question at a time. The <a href="/projects/14-lead-generation/">lead quiz</a> is that card. Contact fields come after the answers, and the sample result stays on this page. The lines on the page say what the briefing does not do: it does not file a claim, review records, or decide who qualifies.</p>
+    <h5>How we measure it</h5>
     <ul>
-      <li>The campaign record: the headline, the date, the agenda, and the lines that say this page does not file a claim.</li>
-      <li>The quiz in that card. The steps match the lead quiz. Choosing an answer records lead_step. The result records lead_complete. Form data is kept for demonstration purposes only and will not be sold or shared.</li>
-      <li>The color system on this folder: ink, accent, gold, paper, and the tint behind notes.</li>
+      <li>lead_view. The briefing was seen.</li>
+      <li>lead_step, with the step number. That shows whether an answer moved them forward, and which step they left.</li>
+      <li>lead_complete. They reached the sample result, which means the contact step was accepted.</li>
     </ul>
+    <p>This page is a sample, so the rate is named here and not published as a result. Form data is kept for demonstration purposes only and will not be sold or shared.</p>
+    <!--below-->
     <h5>How someone else reuses it</h5>
-    <p>Copy <a href="/iframes/benefits/index.html">the benefits folder</a>. Edit campaign.js, including the quiz list. Leave the layout. The session version, without the quiz, is the <a href="/projects/13-signup-landing/">lead funnel landing page</a>.</p>
+    <p>Copy <a href="/iframes/benefits/index.html">the benefits folder</a>. Edit campaign.js: the quiz list, the headline, the date, the agenda, and the lines that say this page does not file a claim. Leave the layout. Navy, official blue, and a gold rule are the colors on this folder. The session version, without the quiz, is the <a href="/projects/13-signup-landing/">lead funnel landing page</a>.</p>
 
 details:
   title: Project snapshot
@@ -38,7 +44,7 @@ details:
       value: HTML, CSS, JavaScript
 
     - label: Focus
-      value: Benefits briefing
+      value: Quiz completion
 
     - label: Status
       value: Sample

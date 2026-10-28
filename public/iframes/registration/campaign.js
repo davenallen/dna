@@ -12,7 +12,7 @@ var campaign = {
   // Header logo. Replace this file, or point mark at another image.
   mark: "/img/logo.png",
   eyebrow: "Live session",
-  headline: "A simple & powerful lead funnel - Live Session",
+  headline: "An impactful lead funnel - Live Session",
   subhead: "Reserve a seat with your email. Get an SMS reminder, add it to your calendar, and get an onboarding experience.",
   button: "Reserve a seat",
   note: "No account. One confirmation email.",

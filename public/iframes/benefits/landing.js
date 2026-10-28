@@ -8,6 +8,7 @@
   var error = "";
   var done = false;
   var saving = false;
+  var formStarted = false;
 
   function nodes(selector) {
     return Array.prototype.slice.call(document.querySelectorAll(selector));
@@ -98,35 +99,26 @@
     return source + " / " + medium + " / " + name;
   }
 
-  function payload(name) {
-    var params = new URLSearchParams(window.location.search);
-    var data = {
-      event: name,
-      module: "benefits-landing",
-      campaign: campaign.slug,
-      visit_source: (params.get("utm_source") || "direct").trim() || "direct",
-      visit_medium: (params.get("utm_medium") || "").trim(),
-      visit_campaign: (params.get("utm_campaign") || "").trim()
-    };
-    Object.keys(data).forEach(function (key) {
-      if (data[key] === "") delete data[key];
+  function track(name, extra) {
+    extra = extra || {};
+    window.dnaCampaignEvent(name, {
+      landing_name: "Disability Benefits Landing Page",
+      landing_id: campaign.slug,
+      form_name: name === "lead_view" || name === "landing_view" ? "" : "benefits_quiz",
+      form_step: extra.form_step || extra.step || "",
+      form_step_name: extra.form_step_name || "",
+      lead_status: extra.lead_status || ""
     });
-    return data;
   }
 
-  function track(name, extra) {
-    var data = payload(name);
-    if (extra) {
-      Object.keys(extra).forEach(function (key) {
-        if (extra[key] === "" || extra[key] == null) return;
-        data[key] = extra[key];
-      });
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(data);
-    if (typeof window.gtag === "function") {
-      window.gtag("event", name, data);
-    }
+  function markStart(stepName) {
+    if (formStarted) return;
+    formStarted = true;
+    track("form_start", {
+      lead_status: "started",
+      form_step: step + 1,
+      form_step_name: stepName || ""
+    });
   }
 
   function calendarUrl() {
@@ -210,9 +202,15 @@
 
   function go(next) {
     var forward = next > step;
+    if (forward) markStart((STEPS[step] && STEPS[step].id) || "contact");
     error = "";
     step = next;
-    if (forward) track("lead_step", { step: next + 1 });
+    if (forward) {
+      track("lead_step", {
+        form_step: next + 1,
+        form_step_name: (STEPS[next] && STEPS[next].id) || "contact"
+      });
+    }
     paint();
   }
 
@@ -321,6 +319,7 @@
     }
     input.setAttribute("data-quiz-field", name);
     input.addEventListener("input", function (event) {
+      markStart("contact");
       var value = event.target.value;
       var cursor = event.target.selectionStart || 0;
       if (name === "zip") {

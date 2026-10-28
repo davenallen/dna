@@ -2,10 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import Script from "next/script";
 import { ensureVisit, track } from "@library/visit";
-
-const GA_ID = "G-SELDNTWN7S";
 
 function isContactPath(href) {
   const path = href.split("?")[0].split("#")[0];
@@ -40,7 +37,11 @@ export default function GoogleAnalytics() {
     if (skipFirst.current) {
       skipFirst.current = false;
     } else if (typeof window.gtag === "function") {
-      window.gtag("config", GA_ID, { page_path: pathname });
+      window.gtag("event", "page_view", {
+        page_path: pathname,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
     }
     track("page_view", { page_path: pathname });
   }, [pathname]);
@@ -69,21 +70,5 @@ export default function GoogleAnalytics() {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
-  return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
-        `}
-      </Script>
-    </>
-  );
+  return null;
 }

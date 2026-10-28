@@ -148,35 +148,19 @@
     return source + " / " + medium + " / " + name;
   }
 
-  function payload(name) {
-    var params = new URLSearchParams(window.location.search);
-    var data = {
-      event: name,
-      module: "registration-landing",
-      campaign: campaign.slug,
-      visit_source: (params.get("utm_source") || "direct").trim() || "direct",
-      visit_medium: (params.get("utm_medium") || "").trim(),
-      visit_campaign: (params.get("utm_campaign") || "").trim()
-    };
-    Object.keys(data).forEach(function (key) {
-      if (data[key] === "") delete data[key];
-    });
-    return data;
-  }
-
   function track(name, extra) {
-    var data = payload(name);
-    if (extra) {
-      Object.keys(extra).forEach(function (key) {
-        if (extra[key] === "" || extra[key] == null) return;
-        data[key] = extra[key];
-      });
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(data);
-    if (typeof window.gtag === "function") {
-      window.gtag("event", name, data);
-    }
+    extra = extra || {};
+    var formName = "reserve_seat";
+    if (extra.module === "onboarding" || name.indexOf("onboarding") === 0) formName = "onboarding";
+    else if (name.indexOf("reminder") === 0) formName = "sms_reminder";
+    window.dnaCampaignEvent(name, {
+      landing_name: "Lead Funnel Landing Page",
+      landing_id: campaign.slug,
+      form_name: name === "signup_view" ? "" : formName,
+      form_step: extra.step || "",
+      form_step_name: extra.card || extra.how || "",
+      lead_status: name === "onboarding_finish" ? "completed" : ""
+    });
   }
 
   function calendarUrl() {
@@ -284,7 +268,7 @@
         panel.appendChild(close);
       }
       var thanks = el("p", "onboard-thanks");
-      thanks.appendChild(document.createTextNode("Thank you for signing up for the"));
+      thanks.appendChild(document.createTextNode("Thank you for signing up for "));
       thanks.appendChild(el("strong", "", "the live session"));
       panel.appendChild(thanks);
 

@@ -37,7 +37,7 @@ var campaign = {
     empty: "Enter a phone number."
   },
   sections: {
-    benefits: "What the campaign covers",
+    benefits: "What the funnel covers",
     agenda: "Email, SMS, calendar, onboarding, and replay",
     fit: "Who's it is for",
     faq: "Questions"

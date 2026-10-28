@@ -141,6 +141,15 @@ const Layouts = ({
   return (
     <html lang="en" data-theme="dark" className={`${headline_font.variable} ${body_font.variable} ${secondary_font.variable}`} style={cssVars}>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWBDRV2H');`,
+          }}
+        />
         <meta name="theme-color" content="#1e1e28" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -154,6 +163,14 @@ const Layouts = ({
         />
       </head>
       <body className="default--scrolling">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KWBDRV2H"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <GoogleAnalytics />
         <ResumeViewer />
         <ImageView />

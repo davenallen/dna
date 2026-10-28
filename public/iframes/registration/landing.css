@@ -66,6 +66,9 @@ a { color: inherit; }
   margin-right: auto;
   object-fit: contain;
   object-position: left center;
+}
+
+.bar:not(.section-alt) .mark {
   filter: invert(1);
 }
 
@@ -77,6 +80,10 @@ a { color: inherit; }
     color: var(--paper);
     font-size: 14px;
     font-weight: 600;
+}
+
+.bar.section-alt .bar-when {
+  color: var(--ink);
 }
 
 .bar-link {
@@ -96,10 +103,84 @@ a { color: inherit; }
     position: relative;
     padding: 40px 0 20px;
     scroll-margin-top: 65px;
-    background-image: url("reg-page-hero-bg.jpg");
-    background-size: 60%;
-    background-position: top right;
-    background-repeat: no-repeat;
+}
+
+.on-dark {
+  background-color: var(--ink);
+  color: #fff;
+}
+
+.on-dark h1,
+.on-dark h2,
+.on-dark h3 {
+  color: #fff;
+}
+
+.on-dark .lede,
+.on-dark .checks li {
+  color: #d7e6df;
+}
+
+.on-dark .button {
+  background: #fff;
+  color: var(--ink);
+}
+
+.on-dark .button:hover {
+  background: var(--paper);
+}
+
+.on-dark .button-ghost {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.on-dark .button-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.on-dark .card,
+.on-dark .card h1,
+.on-dark .card h2,
+.on-dark .card h3,
+.on-dark .card .remind-title,
+.on-dark .card .card-when,
+.on-dark .card .facts strong,
+.on-dark .card .done-email,
+.on-dark .card .done-list {
+  color: var(--ink);
+}
+
+.on-dark .card .remind-lead,
+.on-dark .card .form-note,
+.on-dark .card .done-note,
+.on-dark .card .facts span,
+.on-dark .card .card-when span:last-child,
+.on-dark .card .onboard-body,
+.on-dark .card .onboard-picked {
+  color: var(--muted);
+}
+
+.on-dark .card .button {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.on-dark .card .button:hover {
+  background: var(--accent-dark);
+}
+
+.on-dark .card .button-ghost {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.on-dark .card .button-ghost:hover {
+  background: #e7f6ef;
+  color: var(--accent-dark);
 }
 
 .hero-grid { position: relative; z-index: 1; display: grid; gap: 28px; }
@@ -634,11 +715,6 @@ h2 {
 
 @media (max-width: 420px) {
   .cal .button { width: 100%; }
-  .hero { 
-    background-size: contain;
-    background-position: top right;
-    background-repeat: no-repeat;
-  }
   .cards article {
     border-bottom: 1px solid var(--line);
     border-left: 3px solid var(--ok);

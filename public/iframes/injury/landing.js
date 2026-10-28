@@ -13,6 +13,7 @@
   var saving = false;
   var motion = "";
   var progressFrom = 0;
+  var formStarted = false;
 
   function nodes(selector) {
     return Array.prototype.slice.call(document.querySelectorAll(selector));
@@ -108,16 +109,24 @@
     });
   }
 
+  function stepName(index) {
+    var path = currentPath();
+    var item = path && path.steps[index];
+    if (!item) return "";
+    return item.name || item.kind || "";
+  }
+
   function track(name, extra) {
-    var data = { event: name, module: "injury-landing", campaign: campaign.slug, path: pathId };
-    if (extra) {
-      Object.keys(extra).forEach(function (key) {
-        if (extra[key] === "" || extra[key] == null) return;
-        data[key] = extra[key];
-      });
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(data);
+    extra = extra || {};
+    window.dnaCampaignEvent(name, {
+      landing_name: "Injury Evaluation Landing Page",
+      landing_id: campaign.slug,
+      form_name: name === "landing_view" || name === "lead_view" ? "" : "injury_evaluation",
+      form_step: extra.form_step || extra.step || "",
+      form_step_name: extra.form_step_name || "",
+      form_path: pathId,
+      lead_status: extra.lead_status || ""
+    });
   }
 
   function openPath(id) {
@@ -128,7 +137,11 @@
     done = false;
     motion = "forward";
     progressFrom = 0;
-    track("lead_step", { step: 1 });
+    if (!formStarted) {
+      formStarted = true;
+      track("form_start", { form_step: 1, form_step_name: stepName(0), lead_status: "started" });
+    }
+    track("lead_step", { step: 1, form_step_name: stepName(0) });
     paint();
     var quiz = document.querySelector("[data-quiz]");
     if (quiz) quiz.scrollIntoView({ block: "nearest" });
@@ -210,7 +223,7 @@
       return;
     }
     step += 1;
-    track("lead_step", { step: step + 1 });
+    track("lead_step", { step: step + 1, form_step_name: stepName(step) });
     paint();
   }
 
@@ -257,7 +270,7 @@
       return;
     }
     step += 1;
-    track("lead_step", { step: step + 1 });
+    track("lead_step", { step: step + 1, form_step_name: stepName(step) });
     paint();
   }
 
@@ -464,5 +477,6 @@
 
   fillPage();
   paint();
+  track("landing_view", { lead_status: "viewed" });
   window.addEventListener("resize", reportHeight);
 })();

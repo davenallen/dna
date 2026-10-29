@@ -127,13 +127,13 @@ app marcup
       flex-wrap: nowrap;
       /* ----- info bar ----- */
       & .dna-info-bar {
-        background: $info-bar-1-color;
+        /* background: $info-bar-1-color; */
         width: 290px;
         min-width: 290px;
         height: calc(100vh - 30px);
         position: relative;
         z-index: 999;
-        box-shadow: $shadow-1;
+        /* box-shadow: $shadow-1; */
         transition: $tr-lg;
 
         & .dna-info-bar-frame {
@@ -203,7 +203,7 @@ app marcup
       }
       /* ----- menu bar ----- */
       & .dna-menu-bar {
-        background: $info-bar-1-color;
+        /* background: $info-bar-1-color; */
         width: 230px;
         height: calc(100vh - 30px);
         position: absolute;
@@ -211,7 +211,7 @@ app marcup
         right: -150px;
         top: 0;
         bottom: 0;
-        box-shadow: $shadow-1;
+        /* box-shadow: $shadow-1; */
         transition: $tr-lg;
 
         & .dna-menu-bar-frame {

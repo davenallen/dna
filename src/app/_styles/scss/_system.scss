@@ -556,7 +556,6 @@ span.ds-offer-best {
   padding: 2px 8px;
   border-radius: var(--radius-sm);
   background: var(--color-success);
-  color: #07202c;
 }
 
 .ds-offer-pack--package1 {
@@ -1253,6 +1252,7 @@ span.ds-offer-best {
   gap: var(--space-5);
   margin-bottom: var(--space-2);
   color: var(--color-text-muted);
+  font-size: var(--type-size-sm);
 
   h6 {
     margin: 0;

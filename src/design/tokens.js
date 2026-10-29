@@ -43,6 +43,10 @@ const tokens = {
       value: "#ff4d67",
       used: "Marks for what a package leaves out",
     },
+    navy: {
+      value: "#0B1F3A",
+      used: "Hero headline and profile header",
+    },
     text: {
       value: "rgba(250, 250, 252, 1)",
       used: "Headings and primary text",

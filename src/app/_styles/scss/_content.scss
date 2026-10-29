@@ -20,7 +20,7 @@ content
 }
 /* ----- card ----- */
 .dna-card {
-  background: $card-color;
+  /* background: $card-color; */
   box-shadow: $shadow-1;
   padding: 30px;
   margin-bottom: 30px;
@@ -108,6 +108,10 @@ content
           line-height: 1;
           letter-spacing: -0.03em;
         }
+
+        @at-root html[data-theme="light"] .dna-banner.dna-banner-hire .dna-banner-overlay.dna-banner-overlay-grid .dna-banner-title h1 {
+          color: $navy-color;
+        }
       }
 
       & .dna-banner-photo-wrap {
@@ -172,7 +176,7 @@ content
         background-repeat: no-repeat;
         background-size: 60% auto;
         background-position: right bottom;
-        filter: opacity(0.2);
+        filter: opacity(0.1);
         transition: opacity var(--motion-slow);
       }
 
@@ -214,7 +218,7 @@ content
 
           & h1 {
             max-width: 7.15em;
-            font-size: 52px;
+            font-size: 61px;
             line-height: 0.96;
             letter-spacing: -0.035em;
           }
@@ -916,7 +920,7 @@ content
   z-index: 1;
   overflow: hidden;
   box-shadow: $shadow-1;
-  background: $card-color;
+  /* background: $card-color; */
 
   & .dna-service-ib-content {
     padding: 30px;
@@ -2247,7 +2251,7 @@ content (after 768px)
       padding: 28px 20px 24px;
 
       & .dna-banner-title h1 {
-        font-size: 34px;
+        font-size: 51px;
       }
     }
   }

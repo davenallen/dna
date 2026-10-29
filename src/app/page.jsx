@@ -9,6 +9,8 @@ import WhyHireSection from "@components/sections/WhyHire";
 import ServicesSection from "@components/sections/Services";
 import ExperienceSnapshotSection from "@components/sections/ExperienceSnapshot";
 import ReleaseWeekSection from "@components/sections/ReleaseWeek";
+import TestimonialSlider from "@components/sliders/Testimonial";
+
 
 export const metadata = {
   title: {
@@ -29,6 +31,7 @@ async function Home1() {
       <ServicesSection />
       <ExperienceSnapshotSection />
       <ReleaseWeekSection paddingTop={30} />
+      <TestimonialSlider />
     </>
   );
 };

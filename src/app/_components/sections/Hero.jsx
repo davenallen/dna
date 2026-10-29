@@ -13,6 +13,9 @@ const HeroOne = ({ variant = "portrait" }) => {
     const photoSrc = resolveImg(Data.photo.url);
     const hoverSrc = resolveImg(Data.photo.hoverUrl);
     const hasHoverSwap = Boolean(hoverSrc);
+    const headlineHtml = isCopy
+        ? Data.title.replace("<span>", '<span class="dna-hero-headline-tail">')
+        : Data.title;
 
     return (
         <div className="container-fluid">
@@ -29,14 +32,7 @@ const HeroOne = ({ variant = "portrait" }) => {
                                 {Data.status && (
                                     <span className="dna-status-pill">{Data.status}</span>
                                 )}
-                                {isCopy && Data.title.endsWith(" one person.") ? (
-                                    <h1 className="mb-15">
-                                        {Data.title.slice(0, -" one person.".length)}{" "}
-                                        <span className="dna-hero-headline-tail">one person.</span>
-                                    </h1>
-                                ) : (
-                                    <h1 className="mb-15" dangerouslySetInnerHTML={{ __html: Data.title }} />
-                                )}
+                                <h1 className="mb-15" dangerouslySetInnerHTML={{ __html: headlineHtml }} />
                                 {Data.roleLine && (
                                     <p className="dna-role-line mb-15">{Data.roleLine}</p>
                                 )}

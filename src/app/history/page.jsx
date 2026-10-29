@@ -18,9 +18,9 @@ export const metadata = {
 async function HistoryPage() {
   return (
     <>
-      <HistorySection paddingTop={1} />
+      <HistorySection paddingTop={30} />      
+      <ReleaseWeekSection paddingTop={30} />
       <TestimonialSlider />
-      <ReleaseWeekSection />
     </>
   );
 };

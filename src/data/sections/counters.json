@@ -13,8 +13,14 @@
             "static": true
         },
         {
+            "label": "Optimization",
+            "value": "Funnel",
+            "valueAfter": "",
+            "static": true
+        },
+        {
             "label": "Based In",
-            "value": "Lakewood, CO",
+            "value": "Denver, CO",
             "valueAfter": "",
             "static": true
         }

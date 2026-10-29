@@ -1,9 +1,9 @@
 {
     "bg_image": "",
-    "status": "Open to a senior product seat · Lakewood, CO",
-    "roleLine": "Interface / Front-end / Product owner",
-    "title": "UI, UX, systems and tracking — owned by one person.",
-    "description": "I ship the interface and the events it fires. JavaScript, CSS, and SCSS, from a design spec into a coherent codebase. Membership and webinar flows, UTM handoff, and GTM dataLayer events. The conversion readout stayed with the company. I can own a frontend without a large team. I'm looking for a senior product role.",
+    "status": "Open to remote & Denver hybrid",
+    "roleLine": "Frontend, Funnel Optimization, Product owner",
+    "title": "UI / UX / CRO <span>— in one seat.</span>",
+    "description": "I analyze data and run experiments to raise conversion. I ship the interface and its iterations, plus the events it fires. JS, CSS, and SCSS from spec to coherent code. Membership and webinar flows, UTM handoff, GTM dataLayer, and continuous optimization. I can own a frontend without a large team or work with one. Seeking a senior product role.",
     "button": {
         "link": "/contact",
         "label": "Let's talk"
@@ -16,6 +16,6 @@
     "photo": {
         "url": "/img/me.jpg",
         "hoverUrl": "/img/me-ai.jpg",
-        "alt": "David N Allen — senior front-end engineer, Lakewood, CO"
+        "alt": "David N. Allen — senior frontend engineer, Denver, CO"
     }
 }

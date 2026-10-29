@@ -16,7 +16,7 @@ summary: A live session only counts if someone reserves a seat. Email first, the
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end and CRO</p>
+    <p><strong>Role:</strong> Frontend and CRO</p>
     <p>A live session only produces a room if people reserve a seat. When the page leads with the full pitch and then asks for email, phone, and calendar together, the seat competes with the story. Ready visitors hunt for the form. Visitors who need a reason never get a clear next step.</p>
     <p>Ask for the email before the rest of the pitch. Keep the session time in the card. After the address, ask one question: an SMS 30 minutes before the session. Repeat that same form at the bottom for anyone who reads first. The pitch explains the session. The email is the action.</p>
     <p>The outcome to move is completed signups, then the share of those signups that take the reminder. Source, medium, and campaign stay on the confirmation, so the rate can be read by campaign.</p>
@@ -42,7 +42,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end + CRO
+      value: Frontend + CRO
 
     - label: Stack
       value: HTML, CSS, JavaScript

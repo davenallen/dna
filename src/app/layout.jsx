@@ -63,7 +63,7 @@ export const metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: AppData.settings.siteName,
-    title: "David N. Allen — Senior Front-end Engineer & CRO",
+    title: "David N. Allen — Senior Frontend Engineer & CRO",
     description: AppData.settings.siteDescription,
     images: [
       {
@@ -76,7 +76,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "David N. Allen — Senior Front-end Engineer & CRO",
+    title: "David N. Allen — Senior Frontend Engineer & CRO",
     description: AppData.settings.siteDescription,
     images: ["/img/me.jpg"],
   },
@@ -95,7 +95,7 @@ const personJsonLd = {
   "name": "David N. Allen",
   "url": siteUrl,
   "image": `${siteUrl}/img/me.jpg`,
-  "jobTitle": "Senior Front-end Engineer",
+  "jobTitle": "Senior Frontend Engineer",
   "description": AppData.settings.siteDescription,
   "email": "david@davidnallen.com",
   "address": {
@@ -119,7 +119,7 @@ const personJsonLd = {
     "GTM",
     "CRO",
     "Conversion rate optimization",
-    "Front-end development",
+    "Frontend development",
     "Membership flows",
     "Webinar flows"
   ],

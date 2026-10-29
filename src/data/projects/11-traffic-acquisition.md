@@ -11,7 +11,7 @@ summary: Session information in this site's system, using sources already record
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end</p>
+    <p><strong>Role:</strong> Frontend</p>
     <p><strong>Context:</strong> This site. Session information redraws the sources in the GA4 report so they can sit with the other interface work.</p>
     <h5>The decision</h5>
     <p>Session information has to read in the same type and color as the rest of the site, and each row has to say how that visit arrived. The session totals stay in GA.</p>
@@ -32,7 +32,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end
+      value: Frontend
 
     - label: Surface
       value: This site

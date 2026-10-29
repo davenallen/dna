@@ -1,6 +1,6 @@
 # David N Allen
 
-> Senior front-end engineer who builds production interfaces in React and Next.js, and the events those pages fire. JavaScript, CSS, and SCSS. Based in Lakewood, CO. Seeking a senior product seat.
+> Senior frontend engineer who builds production interfaces in React and Next.js, and the events those pages fire. JavaScript, CSS, and SCSS. Based in Lakewood, CO. Seeking a senior product seat.
 
 ## Summary for hiring
 
@@ -8,7 +8,7 @@ David N Allen builds production interfaces in React and Next.js. Matching a Figm
 
 ## Ideal roles
 
-- Senior Front-end Engineer, product
+- Senior Frontend Engineer, product
 - React / Next.js engineer who owns the UI and the CRO
 - Product frontend seat with Figma-to-Sass delivery
 

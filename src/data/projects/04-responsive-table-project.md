@@ -13,7 +13,7 @@ summary: Built a scalable, mobile-first pricing table for packages, bonuses, and
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> UI design + front-end implementation</p>
+    <p><strong>Role:</strong> UI design + frontend implementation</p>
     <p><strong>Context:</strong> Buyers comparing packages on an offer page, on a desktop or a phone. Marketing needed one pricing table it could reuse across product types. I designed it and built it in HTML, CSS, and JavaScript.</p>
     <h5>The decision</h5>
     <p>A buyer comparing packages has to scan name, price, retail price, bonuses, and what is included, and still be able to do that on a phone.</p>
@@ -80,13 +80,13 @@ description:
     <!--shots-->
     <h5>What I would do next</h5>
     <p>Run a few moderated sessions with buyers on phones to check that comparing packages in the card view is as quick as in the table.</p>
-    <p><em>Skills demonstrated:</em> Responsive design, front-end implementation, component design, marketing operations.</p>
+    <p><em>Skills demonstrated:</em> Responsive design, frontend implementation, component design, marketing operations.</p>
 
 details:
   title: Project snapshot
   items:
     - label: Role
-      value: UI + front-end
+      value: UI + frontend
 
     - label: Stack
       value: HTML, CSS, JavaScript

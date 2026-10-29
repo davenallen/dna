@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 
   return {
       title: postData.title + " — Case Study",
-      description: description || `${postData.title} case study by David N Allen — front-end engineer and UI/UX designer.`,
+      description: description || `${postData.title} case study by David N Allen — frontend engineer and UI/UX designer.`,
   }
 }
 

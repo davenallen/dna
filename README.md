@@ -1,6 +1,6 @@
 # David N. Allen
 
-Personal site for [David N. Allen](https://www.davidnallen.com), a senior front-end engineer in Lakewood, CO. The app is Next.js 14 and React 18. `next.config.js` sets `output: 'export'`, so a production build is a static site in `out/`.
+Personal site for [David N. Allen](https://www.davidnallen.com), a senior frontend engineer in Denver, CO. The app is Next.js 14 and React 18. `next.config.js` sets `output: 'export'`, so a production build is a static site in `out/`.
 
 Requires Node.js 18.17 or later.
 

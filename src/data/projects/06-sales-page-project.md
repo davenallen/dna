@@ -11,7 +11,7 @@ summary: Designed and built a responsive fintech-style sales page that guides tr
 description:
   title: Case study
   content: '
-      <p><strong>Role:</strong> UX/UI design + front-end build</p>
+      <p><strong>Role:</strong> UX/UI design + frontend build</p>
       <p><strong>Context:</strong> Simpler Trading — product marketing for scanning tools and trading indicators</p>
       <h5>The decision</h5>
       <p>The page has to move a trader from the headline to a signup, with the proof, the features, and the button visible on the way down, on desktop and on a phone.</p>
@@ -32,7 +32,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: UX/UI + front-end
+      value: UX/UI + frontend
 
     - label: Employer
       value: Simpler Trading

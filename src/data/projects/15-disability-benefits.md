@@ -15,7 +15,7 @@ summary: A briefing only helps if someone finishes it. One question at a time, t
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end and CRO</p>
+    <p><strong>Role:</strong> Frontend and CRO</p>
     <p>A briefing on Social Security disability benefits only helps if someone can finish it. A page that leads with the whole explanation, then asks for a name and a phone number, requests a claim before the person understands the program. This page is a sample. It is not a government site, and it does not file a claim.</p>
     <p>Keep the briefing, and make the card one question at a time. An age range, a few yes or no questions, a short note, then name, email, phone, and ZIP. The result stays on the page. What the briefing covers, the agenda, who it is for, and the questions stay for anyone who needs the reason first. The same card returns at the bottom.</p>
     <p>The outcome to move is a completed quiz: someone who answers the questions, passes the contact step, and sees the sample result. The step events show where people stop on the way there.</p>
@@ -38,7 +38,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end + CRO
+      value: Frontend + CRO
 
     - label: Stack
       value: HTML, CSS, JavaScript

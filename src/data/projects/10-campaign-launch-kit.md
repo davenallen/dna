@@ -14,7 +14,7 @@ summary: One campaign record drives the calendar invite, the timed redirects, an
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end</p>
+    <p><strong>Role:</strong> Frontend</p>
     <p><strong>Context:</strong> Simpler Trading. After someone registers, the confirmation, the live URL, and the next webinar have to stay in agreement. This is that production behavior, rebuilt here with a sample record. Live offer URLs and internal campaign codes stay off this page.</p>
     <h5>The decision</h5>
     <p>One campaign record is the source of truth. The calendar invite, the moment the URL becomes the replay, and the moment the next webinar takes that URL all come from that record. A date that is not in the spec does not go on the page. A member who already owns a product can have that tier hidden.</p>
@@ -37,7 +37,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end
+      value: Frontend
 
     - label: Employer
       value: Simpler Trading

@@ -12,7 +12,7 @@ summary: A qualifying quiz that asks one question at a time, then a contact step
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> UI design + front-end</p>
+    <p><strong>Role:</strong> UI design + frontend</p>
     <p><strong>Context:</strong> A lead page that has to qualify someone before it asks for a name. The original was a long quiz with one question on screen at a time.</p>
     <h5>The decision</h5>
     <p>A person should answer the current question and move on, not face the whole form. The contact fields come after the questions. The result stays on the page.</p>
@@ -31,7 +31,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: UI + front-end
+      value: UI + frontend
 
     - label: Stack
       value: React

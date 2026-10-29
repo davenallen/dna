@@ -14,7 +14,7 @@ summary: Three kinds of injury do not share one form. Pick a path, then answer o
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end and CRO</p>
+    <p><strong>Role:</strong> Frontend and CRO</p>
     <p>An injury evaluation only helps if the person finishes it. A page that asks vehicle, personal injury, and workers' comp questions in one form makes every visitor answer questions that are not theirs. A ready person stalls. Someone who is unsure which kind of case they have never gets a clear first step.</p>
     <p>Open with one choice: vehicle, personal injury, or workers' comp. That choice stays on the page and opens only that path's questions, one at a time. Name, email, and phone come after the questions. The confirmation stays in the same frame.</p>
     <p>The outcome to move is a completed evaluation, read by path. A vehicle case, a personal injury, and a workers' comp case should be three rates, not one blended number.</p>
@@ -37,7 +37,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end + CRO
+      value: Frontend + CRO
 
     - label: Stack
       value: HTML, CSS, JavaScript

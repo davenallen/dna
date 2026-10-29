@@ -14,7 +14,7 @@ summary: The production path from a campaign visit to a signup. The UTM stays in
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end and CRO</p>
+    <p><strong>Role:</strong> Frontend and CRO</p>
     <p><strong>Context:</strong> Simpler Trading — membership and webinar registration. The behavior shipped. The page on this site uses a sample record.</p>
     <h5>Before</h5>
     <p>A campaign visit reached the registration page, then a redirect. The redirect dropped utm_source, utm_medium, and utm_campaign. The signup was recorded as direct. Paid and email traffic could not be told apart after the hop.</p>
@@ -47,7 +47,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end + CRO
+      value: Frontend + CRO
 
     - label: Employer
       value: Simpler Trading

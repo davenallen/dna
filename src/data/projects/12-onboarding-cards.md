@@ -12,7 +12,7 @@ summary: The cards a new member sees after signup. One step at a time, a store p
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> Front-end</p>
+    <p><strong>Role:</strong> Frontend</p>
     <p><strong>Context:</strong> Simpler Trading. After someone joins or buys, a short set of cards points them at the schedule, alerts, the lists, and other media. This is that production behavior, rebuilt here with a generic membership. Names, room links, and the original art stay off this page.</p>
     <h5>The decision</h5>
     <p>A new member should see one next step, not a dashboard full of links. The first card has nowhere to go but forward. Later cards can go back, skip, or close. The last card is the way out.</p>
@@ -33,7 +33,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Front-end
+      value: Frontend
 
     - label: Employer
       value: Simpler Trading

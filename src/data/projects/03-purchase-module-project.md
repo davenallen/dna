@@ -14,7 +14,7 @@ summary: The plan, the price, and the primary action in one view. The billing pe
 description:
   title: Case study
   content: '
-      <p><strong>Role:</strong> UI design + front-end implementation</p>
+      <p><strong>Role:</strong> UI design + frontend implementation</p>
       <p><strong>Context:</strong> Simpler Trading — membership offers. This is that production behavior, rebuilt here with a sample offer.</p>
       <h5>The decision</h5>
       <p>A buyer comparing memberships has to see the plan difference, the price, and the primary action in one view, and pick a billing period without leaving the module.</p>
@@ -37,7 +37,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: UI + front-end
+      value: UI + frontend
 
     - label: Employer
       value: Simpler Trading

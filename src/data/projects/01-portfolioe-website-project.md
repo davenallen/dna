@@ -12,12 +12,12 @@ summary: Designed and engineered a hire-ready personal site with Node.js with cl
 description:
   title: Case study
   content: '
-      <p><strong>Role:</strong> Product design + front-end engineering (solo)</p>
+      <p><strong>Role:</strong> Product design + frontend engineering (solo)</p>
       <h5>The challenge</h5>
-      <p>Generic portfolio templates signal “designer for hire” more than “senior front-end partner.” I needed a site that hiring managers and AI scanners could parse quickly—role, impact, stack, and proof—without burying the message under decorative work.</p>
+      <p>Generic portfolio templates signal “designer for hire” more than “senior frontend partner.” I needed a site that hiring managers and AI scanners could parse quickly—role, impact, stack, and proof—without burying the message under decorative work.</p>
       <h5>What I did</h5>
       <ul>
-        <li>Positioned the experience around conversion-focused front-end and UI/UX value, not freelancing packages.</li>
+        <li>Positioned the experience around conversion-focused frontend and UI/UX value, not freelancing packages.</li>
         <li>Built the site in <strong>Node.js</strong> with static export, structured content, and maintainable SCSS components.</li>
         <li>Added hire-ready metadata (Open Graph, Person schema, plain-language summary for AI tools) and dual CTAs: talk + resume.</li>
         <li>Organized work as case studies so decision-makers see problem → approach → outcome.</li>
@@ -30,7 +30,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: Design + front-end
+      value: Design + frontend
 
     - label: Type
       value: Personal brand / hiring site

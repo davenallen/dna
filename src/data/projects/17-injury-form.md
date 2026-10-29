@@ -11,7 +11,7 @@ summary: A path selector and a short form. Vehicle, personal injury, and workers
 description:
   title: Case study
   content: |
-    <p><strong>Role:</strong> UI design + front-end</p>
+    <p><strong>Role:</strong> UI design + frontend</p>
     <p><strong>Context:</strong> An injury page that starts with a choice of path. Each path asks a different short set of questions, one step at a time.</p>
     <h5>The decision</h5>
     <p>A person should pick the kind of injury first, then answer the current question and move on. The contact fields come after the questions. The result stays on the page.</p>
@@ -30,7 +30,7 @@ details:
   title: Project snapshot
   items:
     - label: Role
-      value: UI + front-end
+      value: UI + frontend
 
     - label: Stack
       value: React

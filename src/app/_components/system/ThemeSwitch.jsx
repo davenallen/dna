@@ -4,8 +4,15 @@ import { useEffect, useState } from "react";
 import { track } from "@library/visit";
 
 const STORAGE_KEY = "dna-theme";
-const BULB_ON = "\u{1F4A1}\u{FE0F}";
-const BULB_OFF = "\u{1F4A1}\u{FE0E}";
+
+function BulbIcon() {
+  return (
+    <svg className="ds-theme-switch-icon" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M8 1.35C5.55 1.35 3.7 3.25 3.7 5.7c0 1.45.7 2.45 1.65 3.15.5.4.75.8.75 1.3h3.8c0-.5.25-.9.75-1.3.95-.7 1.65-1.7 1.65-3.15 0-2.45-1.85-4.35-4.3-4.35z" />
+      <path d="M6.25 11.55h3.5M6.6 12.9h2.8M7.05 14.25h1.9" />
+    </svg>
+  );
+}
 
 function paintTheme(next) {
   document.documentElement.setAttribute("data-theme", next);
@@ -48,9 +55,7 @@ export function ThemeSwitch({ className = "" }) {
       aria-pressed={isLight}
       aria-label={isLight ? "Switch to dark" : "Switch to light"}
     >
-      <span className={`ds-theme-switch-icon${isLight ? " is-on" : " is-off"}`} aria-hidden="true">
-        {isLight ? BULB_ON : BULB_OFF}
-      </span>
+      <BulbIcon />
     </button>
   );
 }

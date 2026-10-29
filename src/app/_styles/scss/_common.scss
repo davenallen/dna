@@ -110,6 +110,13 @@ a {
     outline: inherit;
   }
 }
+/* ----- button defaults ----- */
+button {
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
 /* ----- table ----- */
 .dna-table {
   color: $text-color-2;
